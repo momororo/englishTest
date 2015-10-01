@@ -144,6 +144,21 @@ void GameScene::onTouchCancelled(Touch *pTouch, Event *pEvent)
 //問題文作成
 void GameScene::makeQuestionText(){
     
+    questions = SaveSQL::sqliteGetValueForKey("number");
+    
+    Label *test1 = Label::createWithSystemFont(questions->at(0)->japanese,defaultFont,30);
+    test1->setPosition(selfFrame.width/2,selfFrame.height/2);
+    test1->setTextColor(Color4B::BLACK);
+    this->addChild(test1);
+    
+    Label *test2 = Label::createWithSystemFont(questions->at(0)->english,defaultFont,30);
+    test2->setPosition(selfFrame.width/2,selfFrame.height/3*2);
+    test2->setTextColor(Color4B::BLACK);
+    this->addChild(test2);
+    
+    
+    
+    
 
 }
 

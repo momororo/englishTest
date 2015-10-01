@@ -7,7 +7,7 @@
 //
 
 #include "SaveSQL.h"
-#define dbName "boki3-database.db"
+#define dbName "english-database.db"
 
 USING_NS_CC;
 

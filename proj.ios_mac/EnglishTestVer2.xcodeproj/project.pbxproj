@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		045C0BF61BBC1463001C3A47 /* bk.png in Resources */ = {isa = PBXBuildFile; fileRef = 045C0BF51BBC1463001C3A47 /* bk.png */; settings = {ASSET_TAGS = (); }; };
+		045C0BFC1BBD0DEA001C3A47 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 045C0BFB1BBD0DEA001C3A47 /* question.csv */; settings = {ASSET_TAGS = (); }; };
 		04A1F5A91BBBF009003A0B54 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A1F5931BBBF009003A0B54 /* AppDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
 		04A1F5AA1BBBF009003A0B54 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A1F5971BBBF009003A0B54 /* GameScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		04A1F5AB1BBBF009003A0B54 /* ImportCSV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A1F5991BBBF009003A0B54 /* ImportCSV.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -110,6 +111,7 @@
 /* Begin PBXFileReference section */
 		045C0BF51BBC1463001C3A47 /* bk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk.png; sourceTree = "<group>"; };
 		045C0BF71BBC14FD001C3A47 /* Gyate-Luminescence.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gyate-Luminescence.ttf"; sourceTree = "<group>"; };
+		045C0BFB1BBD0DEA001C3A47 /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; };
 		04A1F5931BBBF009003A0B54 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		04A1F5941BBBF009003A0B54 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04A1F5951BBBF009003A0B54 /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
+				045C0BFB1BBD0DEA001C3A47 /* question.csv */,
 				045C0BF71BBC14FD001C3A47 /* Gyate-Luminescence.ttf */,
 				045C0BF51BBC1463001C3A47 /* bk.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
@@ -510,6 +513,7 @@
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				045C0BFC1BBD0DEA001C3A47 /* question.csv in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,

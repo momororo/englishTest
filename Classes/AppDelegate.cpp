@@ -57,7 +57,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
 
     //初回のみデータ読込
-    if(UserDefault::getInstance()->getBoolForKey("firstFlag")){
+    if(!UserDefault::getInstance()->getBoolForKey("firstFlag")){
         
         
         SaveSQL::sqliteCreateTable();

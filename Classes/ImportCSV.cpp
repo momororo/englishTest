@@ -33,6 +33,8 @@ Vector<Question*>* ImportCSV::importCSV()
         question->japanese = params.at(2).asString();
         question->english = params.at(3).asString();
         
+        questions->pushBack(question);
+        
     }
 
     return questions;
