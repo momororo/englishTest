@@ -1,0 +1,47 @@
+<Solution>
+  <PropertyGroup Name="eitango" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="background_star.png" />
+        <Image Name="bt_stage_2.png" />
+        <Image Name="bt_stage_3.png" />
+        <Image Name="bt_stage_1.png" />
+        <Image Name="clear_1.png" />
+        <Image Name="clear_3.png" />
+        <Image Name="background.png" />
+        <Folder Name="stage1">
+          <Image Name="number_1.png" />
+          <Image Name="number_2.png" />
+          <Image Name="number_3.png" />
+          <Image Name="number_5.png" />
+          <Image Name="number_7.png" />
+          <Image Name="number_8.png" />
+          <Image Name="number_9.png" />
+        </Folder>
+        <Folder Name="stage2">
+          <Image Name="giraffe.png" />
+          <Image Name="hippopotamus.png" />
+          <Image Name="lake.png" />
+          <Image Name="line_1.png" />
+          <Image Name="line_2.png" />
+          <Image Name="lion.png" />
+          <Image Name="splash.png" />
+          <Image Name="whale.png" />
+          <Image Name="crocodile.png" />
+          <Image Name="elephant.png" />
+          <Image Name="penguin.png" />
+        </Folder>
+        <Folder Name="stage3">
+          <Image Name="cake.png" />
+          <Image Name="cheese.png" />
+          <Image Name="chiken.png" />
+          <Image Name="sausage.png" />
+          <Image Name="soup.png" />
+          <Image Name="tea.png" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
