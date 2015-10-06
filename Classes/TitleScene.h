@@ -28,6 +28,8 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(TitleScene);
+    
+    
 };
 
 #endif // __TITLE_SCENE_H__

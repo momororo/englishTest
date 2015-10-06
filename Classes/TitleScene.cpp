@@ -14,6 +14,8 @@
 
 USING_NS_CC;
 using namespace CocosDenshion;
+using namespace cocostudio;
+using namespace timeline;
 
 Scene* TitleScene::createScene()
 {
@@ -65,10 +67,40 @@ bool TitleScene::init()
     reviewButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*2));
     this->addChild(reviewButton);
     
+    //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
+    mainScene -> setName("mainScene");
     this -> addChild(mainScene);
     
-
+    //cocostudioで設定したフレームの読み込み→gotoFrameAndPlay(読み込むフレーム位置、ループの可否)
+    auto action = CSLoader::getInstance()->createTimeline("GameScene.csb");
+    mainScene -> runAction(action);
+    action -> gotoFrameAndPlay(0, true);
+    
+    auto button = dynamic_cast<ui::Button*>(mainScene -> getChildByName("ScrollView_1")->getChildByName("Button_1"));
+    button -> addTouchEventListener([this](Ref* pSender,ui::Widget::TouchEventType type){
+    
+        /*if (type == ui::Widget::TouchEventType::ENDED) {
+            CCLOG("タッチエンド確認！");
+        }*/
+        
+        switch (type) {
+            case cocos2d::ui::Widget::TouchEventType::BEGAN:
+                CCLOG("タッチビギャン確認！");
+                break;
+                
+            case cocos2d::ui::Widget::TouchEventType::ENDED:
+                CCLOG("タッチエンド確認！");
+                break;
+            case cocos2d::ui::Widget::TouchEventType::MOVED:
+                CCLOG("タッチム〜ブ確認！");
+                break;
+                
+            default:
+                break;
+        }
+    });
+    
     
     
     return true;
@@ -89,7 +121,6 @@ Menu* TitleScene::createTrainingButton(){
     trainingLabel->setTextColor(Color4B::WHITE);
     trainingLabel->setPosition(Vec2(trainingButton->getContentSize().width/2,trainingButton->getContentSize().height/2));
     
-    
     //add
     trainingButton->addChild(trainingLabel);
     
@@ -97,8 +128,6 @@ Menu* TitleScene::createTrainingButton(){
     Sprite *trainingButtonTp = Sprite::create();
     trainingButtonTp->setTextureRect(Rect(0,0,300,100));
     trainingButtonTp->setColor(Color3B::BLACK);
-    
-    
     
     //テキストの生成(押下後)
     Label *trainingLabelTp = Label::createWithSystemFont("トレーニング",defaultFont,30);
@@ -110,8 +139,6 @@ Menu* TitleScene::createTrainingButton(){
     //オパシティ調整
     trainingButtonTp->setOpacity(150);
 
-
-    
     //メニューアイテムの作成
     auto pBtnItem = MenuItemSprite::create(trainingButton, trainingButtonTp, [](Ref *ref){
         //ボタン効果音再生
@@ -149,7 +176,7 @@ Menu* TitleScene::createReviewButton(){
     reviewButtonTp->setColor(Color3B::BLACK);
     
     //テキストの生成(押下後)
-//    Label *reviewLabelTp = Label::createWithSystemFont("復習チェック10",defaultFont,30);
+    //Label *reviewLabelTp = Label::createWithSystemFont("復習チェック10",defaultFont,30);
     Label *reviewLabelTp = Label::createWithSystemFont("復習チェック10", defaultFont, 30);
 
     reviewLabelTp->setTextColor(Color4B::WHITE);
@@ -164,7 +191,7 @@ Menu* TitleScene::createReviewButton(){
     auto pBtnItem = MenuItemSprite::create(reviewButton, reviewButtonTp, [](Ref *ref){
         //ボタン効果音再生
         SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
-        //    Director::getInstance()->replaceScene(TransitionPageTurn::create(1, StorySelect::createScene(), 0));
+        //  Director::getInstance()->replaceScene(TransitionPageTurn::create(1, StorySelect::createScene(), 0));
         
     });
     
@@ -174,5 +201,3 @@ Menu* TitleScene::createReviewButton(){
     return returnButton;
     
 }
-
-

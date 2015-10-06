@@ -31,11 +31,11 @@
             <Image Name="line_2.png" />
             <Image Name="lion.png" />
             <Image Name="splash.png" />
-            <Image Name="whale.png" />
             <Image Name="crocodile.png" />
             <Image Name="elephant.png" />
             <Image Name="penguin.png" />
             <Image Name="lake.png" />
+            <Image Name="whale.png" />
           </Folder>
           <Folder Name="stage3">
             <Image Name="cake.png" />
