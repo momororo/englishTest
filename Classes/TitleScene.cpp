@@ -9,6 +9,9 @@
 #include "TitleScene.h"
 #include "Config.h"
 #include "LoadScene.h"
+#include "ui/CocosGUI.h"
+#include "cocostudio/CocoStudio.h"
+
 USING_NS_CC;
 using namespace CocosDenshion;
 
@@ -61,7 +64,10 @@ bool TitleScene::init()
     auto *reviewButton = createReviewButton();
     reviewButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*2));
     this->addChild(reviewButton);
-
+    
+    auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
+    this -> addChild(mainScene);
+    
 
     
     
@@ -153,8 +159,6 @@ Menu* TitleScene::createReviewButton(){
     reviewButtonTp->addChild(reviewLabelTp);
     //オパシティ調整
     reviewButtonTp->setOpacity(150);
-    
-    
     
     //メニューアイテムの作成
     auto pBtnItem = MenuItemSprite::create(reviewButton, reviewButtonTp, [](Ref *ref){

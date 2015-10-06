@@ -1,0 +1,63 @@
+<Solution>
+  <PropertyGroup Name="eitango" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="GameScene.csd" Type="Scene" />
+        <Project Name="TitleScene.csd" Type="Scene" />
+        <Folder Name="titleScene">
+          <Image Name="logBt.png" />
+          <Image Name="startBt.png" />
+          <Image Name="title_bg.png" />
+          <Image Name="tutorialBt.png" />
+          <Image Name="logBt_tapped.png" />
+          <Image Name="startBt_tapped.png" />
+          <Image Name="tutorialBt_tapped.png" />
+        </Folder>
+        <Folder Name="GameScene">
+          <Folder Name="stage1">
+            <Image Name="number_1.png" />
+            <Image Name="number_2.png" />
+            <Image Name="number_3.png" />
+            <Image Name="number_5.png" />
+            <Image Name="number_7.png" />
+            <Image Name="number_8.png" />
+            <Image Name="number_9.png" />
+          </Folder>
+          <Folder Name="stage2">
+            <Image Name="giraffe.png" />
+            <Image Name="hippopotamus.png" />
+            <Image Name="line_1.png" />
+            <Image Name="line_2.png" />
+            <Image Name="lion.png" />
+            <Image Name="splash.png" />
+            <Image Name="whale.png" />
+            <Image Name="crocodile.png" />
+            <Image Name="elephant.png" />
+            <Image Name="penguin.png" />
+            <Image Name="lake.png" />
+          </Folder>
+          <Folder Name="stage3">
+            <Image Name="cake.png" />
+            <Image Name="cheese.png" />
+            <Image Name="chiken.png" />
+            <Image Name="sausage.png" />
+            <Image Name="soup.png" />
+            <Image Name="tea.png" />
+            <Image Name="background_star.png" />
+          </Folder>
+          <Image Name="background.png" />
+          <Image Name="blind.png" />
+          <Image Name="bt_stage_1.png" />
+          <Image Name="bt_stage_2.png" />
+          <Image Name="bt_stage_3.png" />
+          <Image Name="bt_stage1_tapped.png" />
+          <Image Name="bt_stage2_tapped.png" />
+          <Image Name="bt_stage3_tapped.png" />
+          <Image Name="clear_1.png" />
+          <Image Name="clear_3.png" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
