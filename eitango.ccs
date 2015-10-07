@@ -56,6 +56,12 @@
           <Image Name="bt_stage3_tapped.png" />
           <Image Name="clear_1.png" />
           <Image Name="clear_3.png" />
+          <Image Name="backStage1.png" />
+          <Image Name="backStage2.png" />
+          <Image Name="goStage2.png" />
+          <Image Name="goStage3.png" />
+          <Image Name="gate_2.png" />
+          <Image Name="gate_1.png" />
         </Folder>
       </RootFolder>
     </Group>

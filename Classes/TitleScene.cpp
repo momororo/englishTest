@@ -77,7 +77,7 @@ bool TitleScene::init()
     mainScene -> runAction(action);
     action -> gotoFrameAndPlay(0, true);
     
-    auto button = dynamic_cast<ui::Button*>(mainScene -> getChildByName("ScrollView_1")->getChildByName("Button_1"));
+    auto button = dynamic_cast<ui::Button*>(mainScene -> getChildByName("background")->getChildByName("Button_1"));
     button -> addTouchEventListener([this](Ref* pSender,ui::Widget::TouchEventType type){
     
         /*if (type == ui::Widget::TouchEventType::ENDED) {
@@ -100,8 +100,6 @@ bool TitleScene::init()
                 break;
         }
     });
-    
-    
     
     return true;
 }
