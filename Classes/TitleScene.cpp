@@ -288,6 +288,7 @@ void TitleScene::makeMoveButton(){
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
+                
                 //キャラクターの動作の停止
                 
                 //後で書こうね
@@ -296,6 +297,7 @@ void TitleScene::makeMoveButton(){
                 auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
                 goSt3 -> setVisible(true);
                 goSt3 -> setTouchEnabled(true);
+                
                 auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
                 backSt1 -> setVisible(true);
                 backSt1 -> setTouchEnabled(true);
