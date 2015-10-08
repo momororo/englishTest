@@ -1291,7 +1291,7 @@
           <PointFrame FrameIndex="120" X="1438.0000" Y="576.2974">
             <EasingData Type="0" />
           </PointFrame>
-          <PointFrame FrameIndex="240" X="1438.0000" Y="576.2974">
+          <PointFrame FrameIndex="240" X="1448.4000" Y="576.2974">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
@@ -1790,7 +1790,7 @@
                 <FileData Type="Normal" Path="GameScene/stage3/background_star.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="cake_35" ActionTag="-34804439" Tag="52" IconVisible="False" LeftMargin="1549.5000" RightMargin="31.5000" TopMargin="131.2026" BottomMargin="401.7974" ctype="SpriteObjectData">
+              <AbstractNodeData Name="cake" ActionTag="-34804439" Tag="52" IconVisible="False" LeftMargin="1549.5000" RightMargin="31.5000" TopMargin="131.2026" BottomMargin="401.7974" ctype="SpriteObjectData">
                 <Size X="123.0000" Y="107.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1611.0000" Y="455.2974" />
@@ -1801,7 +1801,7 @@
                 <FileData Type="Normal" Path="GameScene/stage3/cake.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="cheese_36" ActionTag="1921129798" Tag="53" RotationSkewX="7.8230" RotationSkewY="7.8616" IconVisible="False" LeftMargin="1188.0000" RightMargin="406.0000" TopMargin="16.7030" BottomMargin="521.2970" ctype="SpriteObjectData">
+              <AbstractNodeData Name="cheese" ActionTag="1921129798" Tag="53" RotationSkewX="7.8230" RotationSkewY="7.8616" IconVisible="False" LeftMargin="1188.0000" RightMargin="406.0000" TopMargin="16.7030" BottomMargin="521.2970" ctype="SpriteObjectData">
                 <Size X="110.0000" Y="102.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1243.0000" Y="572.2970" />
@@ -1812,7 +1812,7 @@
                 <FileData Type="Normal" Path="GameScene/stage3/cheese.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="chiken_37" ActionTag="-1539193663" Tag="54" IconVisible="False" LeftMargin="1272.5000" RightMargin="236.5000" TopMargin="156.7026" BottomMargin="397.2974" ctype="SpriteObjectData">
+              <AbstractNodeData Name="chiken" ActionTag="-1539193663" Tag="54" IconVisible="False" LeftMargin="1272.5000" RightMargin="236.5000" TopMargin="156.7026" BottomMargin="397.2974" ctype="SpriteObjectData">
                 <Size X="195.0000" Y="86.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1370.0000" Y="440.2974" />
@@ -1823,18 +1823,18 @@
                 <FileData Type="Normal" Path="GameScene/stage3/chiken.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="sausage_38" ActionTag="-2075979641" Tag="55" IconVisible="False" LeftMargin="1386.0000" RightMargin="214.0000" TopMargin="45.7026" BottomMargin="558.2974" ctype="SpriteObjectData">
+              <AbstractNodeData Name="sausage" ActionTag="-2075979641" Tag="55" IconVisible="False" LeftMargin="1386.0000" RightMargin="214.0000" TopMargin="45.7026" BottomMargin="558.2974" ctype="SpriteObjectData">
                 <Size X="104.0000" Y="36.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1438.0000" Y="576.2974" />
+                <AnchorPoint ScaleX="0.6000" ScaleY="0.5000" />
+                <Position X="1448.4000" Y="576.2974" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8439" Y="0.9005" />
+                <PrePosition X="0.8500" Y="0.9005" />
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="GameScene/stage3/sausage.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="soup_39" ActionTag="-161368431" Tag="56" IconVisible="False" LeftMargin="1165.0000" RightMargin="373.0000" TopMargin="543.2026" BottomMargin="49.7974" ctype="SpriteObjectData">
+              <AbstractNodeData Name="soup" ActionTag="-161368431" Tag="56" IconVisible="False" LeftMargin="1165.0000" RightMargin="373.0000" TopMargin="543.2026" BottomMargin="49.7974" ctype="SpriteObjectData">
                 <Size X="166.0000" Y="47.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1248.0000" Y="73.2974" />
@@ -1845,7 +1845,7 @@
                 <FileData Type="Normal" Path="GameScene/stage3/soup.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tea_40" ActionTag="532179846" Tag="57" IconVisible="False" LeftMargin="1582.0000" RightMargin="10.0000" TopMargin="534.2026" BottomMargin="34.7974" ctype="SpriteObjectData">
+              <AbstractNodeData Name="tea" ActionTag="532179846" Tag="57" IconVisible="False" LeftMargin="1582.0000" RightMargin="10.0000" TopMargin="534.2026" BottomMargin="34.7974" ctype="SpriteObjectData">
                 <Size X="112.0000" Y="71.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1638.0000" Y="70.2974" />
@@ -1983,7 +1983,7 @@
                 <FileData Type="Normal" Path="GameScene/blind.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="gate_2_7" ActionTag="1805777154" Tag="64" IconVisible="False" LeftMargin="1120.0000" RightMargin="552.0000" TopMargin="-18.0000" BottomMargin="-18.0000" ctype="SpriteObjectData">
+              <AbstractNodeData Name="gate_2" ActionTag="1805777154" Tag="64" IconVisible="False" LeftMargin="1120.0000" RightMargin="552.0000" TopMargin="-18.0000" BottomMargin="-18.0000" ctype="SpriteObjectData">
                 <Size X="32.0000" Y="676.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1136.0000" Y="320.0000" />
@@ -1994,7 +1994,7 @@
                 <FileData Type="Normal" Path="GameScene/gate_2.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="gate_1_6" ActionTag="-1570150990" Tag="63" IconVisible="False" LeftMargin="552.0000" RightMargin="1120.0000" TopMargin="-18.0000" BottomMargin="-18.0000" ctype="SpriteObjectData">
+              <AbstractNodeData Name="gate_1" ActionTag="-1570150990" Tag="63" IconVisible="False" LeftMargin="552.0000" RightMargin="1120.0000" TopMargin="-18.0000" BottomMargin="-18.0000" ctype="SpriteObjectData">
                 <Size X="32.0000" Y="676.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="568.0000" Y="320.0000" />
