@@ -77,13 +77,11 @@ bool TitleScene::init()
     mainScene -> runAction(action);
     action -> gotoFrameAndPlay(0, true);
     
-    auto button = dynamic_cast<ui::Button*>(mainScene -> getChildByName("background")->getChildByName("Button_1"));
+    //cocostudioのbutton設定
+    auto button = mainScene -> getChildByName("background") -> getChildByName<ui::Button*>("Button_1");
+    
     button -> addTouchEventListener([this](Ref* pSender,ui::Widget::TouchEventType type){
     
-        /*if (type == ui::Widget::TouchEventType::ENDED) {
-            CCLOG("タッチエンド確認！");
-        }*/
-        
         switch (type) {
             case cocos2d::ui::Widget::TouchEventType::BEGAN:
                 CCLOG("タッチビギャン確認！");
