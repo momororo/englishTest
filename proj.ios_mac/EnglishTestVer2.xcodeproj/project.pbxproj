@@ -71,6 +71,9 @@
 		A44FC0771BC3971A00AEE934 /* titleScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0731BC3971A00AEE934 /* titleScene */; settings = {ASSET_TAGS = (); }; };
 		A44FC0781BC3971A00AEE934 /* TitleScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0741BC3971A00AEE934 /* TitleScene.csb */; settings = {ASSET_TAGS = (); }; };
 		A44FC07F1BC6469A00AEE934 /* piyo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A44FC07E1BC6469A00AEE934 /* piyo_1.png */; settings = {ASSET_TAGS = (); }; };
+		A44FC0891BC66BC600AEE934 /* PlistOfWalkSkeletal.plist in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0861BC66BC600AEE934 /* PlistOfWalkSkeletal.plist */; settings = {ASSET_TAGS = (); }; };
+		A44FC08A1BC66BC600AEE934 /* PlistOfWalkSkeletal.png in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0871BC66BC600AEE934 /* PlistOfWalkSkeletal.png */; settings = {ASSET_TAGS = (); }; };
+		A44FC08B1BC66BC600AEE934 /* WalkSkeletal.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0881BC66BC600AEE934 /* WalkSkeletal.csb */; settings = {ASSET_TAGS = (); }; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -189,6 +192,9 @@
 		A44FC0731BC3971A00AEE934 /* titleScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = titleScene; sourceTree = "<group>"; };
 		A44FC0741BC3971A00AEE934 /* TitleScene.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = TitleScene.csb; sourceTree = "<group>"; };
 		A44FC07E1BC6469A00AEE934 /* piyo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piyo_1.png; sourceTree = "<group>"; };
+		A44FC0861BC66BC600AEE934 /* PlistOfWalkSkeletal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlistOfWalkSkeletal.plist; sourceTree = "<group>"; };
+		A44FC0871BC66BC600AEE934 /* PlistOfWalkSkeletal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlistOfWalkSkeletal.png; sourceTree = "<group>"; };
+		A44FC0881BC66BC600AEE934 /* WalkSkeletal.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkSkeletal.csb; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -319,6 +325,9 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A44FC0861BC66BC600AEE934 /* PlistOfWalkSkeletal.plist */,
+				A44FC0871BC66BC600AEE934 /* PlistOfWalkSkeletal.png */,
+				A44FC0881BC66BC600AEE934 /* WalkSkeletal.csb */,
 				A44FC07E1BC6469A00AEE934 /* piyo_1.png */,
 				A44FC0711BC3971A00AEE934 /* GameScene */,
 				A44FC0721BC3971A00AEE934 /* GameScene.csb */,
@@ -526,7 +535,9 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				A44FC08B1BC66BC600AEE934 /* WalkSkeletal.csb in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				A44FC08A1BC66BC600AEE934 /* PlistOfWalkSkeletal.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -538,6 +549,7 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				A44FC0891BC66BC600AEE934 /* PlistOfWalkSkeletal.plist in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				045C0BF61BBC1463001C3A47 /* bk.png in Resources */,

@@ -63,6 +63,22 @@
           <Image Name="gate_2.png" />
           <Image Name="gate_1.png" />
         </Folder>
+        <PlistInfo Name="Plist.csi" Type="Plist" />
+        <Image Name="player_happy_2.png" />
+        <Image Name="player_walk_1.png" />
+        <Image Name="player_walk_2.png" />
+        <Image Name="player.png" />
+        <Image Name="player_happy_1.png" />
+        <Project Name="player_walk.csd" Type="Node" />
+        <Project Name="WalkSkeletal.csd" Type="Skeleton" />
+        <PlistInfo Name="PlistOfWalkSkeletal.csi" Type="Plist" />
+        <Folder Name="walk">
+          <Image Name="player_body.png" />
+          <Image Name="player_leftleg.png" />
+          <Image Name="player_righthand.png" />
+          <Image Name="player_rightleg.png" />
+          <Image Name="player_lefthand.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>
