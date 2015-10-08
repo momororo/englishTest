@@ -25,7 +25,7 @@ public:
     void makeStageButton();
     
     //選択したステージに移動
-    void moveStage(int stageNumber);
+    void makeMoveButton();
     
     // implement the "static create()" method manually
     CREATE_FUNC(TitleScene);
