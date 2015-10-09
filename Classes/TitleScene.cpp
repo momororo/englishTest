@@ -94,6 +94,10 @@ void TitleScene::makeStageButton(){
         
         auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName(StringUtils::format("Button_%d",idx)));
         
+        if(idx != 1){
+            button -> setTouchEnabled(false);
+        }
+        
         //動作設定
         button -> addTouchEventListener([&,idx](Ref* pSender,ui::Widget::TouchEventType type){
             
@@ -126,9 +130,15 @@ void TitleScene::makeMoveButton(){
 
             auto goSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage2"));
             
+            
             //矢印を非表示&タップ不可に
             goSt2 -> setVisible(false);
             goSt2 -> setTouchEnabled(false);
+            
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_1"));
+            button -> setTouchEnabled(false);
+
             
             
             auto bk = this ->getChildByName("mainScene")->getChildByName("background");
@@ -148,9 +158,14 @@ void TitleScene::makeMoveButton(){
                 backSt1 -> setVisible(true);
                 backSt1 -> setTouchEnabled(true);
                 
+                //ボタンを押せるように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+                button -> setTouchEnabled(true);
+
 
                 
             });
+            
             
         
             auto seq = Sequence::create(action1, action2, NULL);
@@ -164,7 +179,7 @@ void TitleScene::makeMoveButton(){
 
     
 /*********goStage3*************/
-    //goStage2の動作設定
+    //goStage3の動作設定
     auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
     //動作設定
     goSt3 -> addTouchEventListener([&](Ref* pSender,ui::Widget::TouchEventType type){
@@ -177,6 +192,11 @@ void TitleScene::makeMoveButton(){
             //矢印を非表示&タップ不可に
             goSt3 -> setVisible(false);
             goSt3 -> setTouchEnabled(false);
+            
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+            button -> setTouchEnabled(false);
+
             
             auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
 
@@ -200,6 +220,11 @@ void TitleScene::makeMoveButton(){
                 backSt2 -> setVisible(true);
                 backSt2 -> setTouchEnabled(true);
                 
+                //ボタンを押せるように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_3"));
+                button -> setTouchEnabled(true);
+
+                
                 
                 
             });
@@ -216,7 +241,7 @@ void TitleScene::makeMoveButton(){
     
 
 /*********backStage1*************/
-    //goStage2の動作設定
+    //backStage1の動作設定
     auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
     //動作設定
     backSt1 -> addTouchEventListener([&](Ref* pSender,ui::Widget::TouchEventType type){
@@ -229,6 +254,11 @@ void TitleScene::makeMoveButton(){
             //矢印を非表示&タップ不可に
             goSt3 -> setVisible(false);
             goSt3 -> setTouchEnabled(false);
+            
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+            button -> setTouchEnabled(false);
+
             
             auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
             
@@ -251,6 +281,11 @@ void TitleScene::makeMoveButton(){
                 auto goSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage2"));
                 goSt2 -> setVisible(true);
                 goSt2 -> setTouchEnabled(true);
+                
+                //ボタンを押せるように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_1"));
+                button -> setTouchEnabled(true);
+
                 
                 
                 
@@ -282,6 +317,11 @@ void TitleScene::makeMoveButton(){
             backSt2 -> setVisible(false);
             backSt2 -> setTouchEnabled(false);
             
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_3"));
+            button -> setTouchEnabled(false);
+
+            
             
             auto piyo = this ->getChildByName("piyo");
             //画面移動
@@ -301,6 +341,11 @@ void TitleScene::makeMoveButton(){
                 auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
                 backSt1 -> setVisible(true);
                 backSt1 -> setTouchEnabled(true);
+                
+                //ボタンを押せないように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+                button -> setTouchEnabled(true);
+
                 
                 
                 
