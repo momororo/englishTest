@@ -2,11 +2,11 @@
   <PropertyGroup Type="Plist" Name="Plist" ID="43e087ef-d359-48ac-9363-23e31e792534" Version="2.3.2.3" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
-      <FilePathData Path="player.png" />
-      <FilePathData Path="player_happy_2.png" />
-      <FilePathData Path="player_walk_1.png" />
-      <FilePathData Path="player_walk_2.png" />
-      <FilePathData Path="player_happy_1.png" />
+      <FilePathData Path="player_wark_test/player.png" />
+      <FilePathData Path="player_wark_test/player_happy_2.png" />
+      <FilePathData Path="player_wark_test/player_walk_1.png" />
+      <FilePathData Path="player_wark_test/player_walk_2.png" />
+      <FilePathData Path="player_wark_test/player_happy_1.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

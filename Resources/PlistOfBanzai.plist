@@ -4,60 +4,71 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>player_wark_test/player.png</key>
+			<key>banzai/body_happy.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,79},{68,79}}</string>
+				<string>{{0,0},{65,72}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{68,79}</string>
+				<string>{65,72}</string>
 			</dict>
-			<key>player_wark_test/player_happy_2.png</key>
+			<key>banzai/lefthand_happy.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{70,79}}</string>
+				<string>{{0,143},{18,21}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{70,79}</string>
+				<string>{18,21}</string>
 			</dict>
-			<key>player_wark_test/player_walk_1.png</key>
+			<key>banzai/leftleg_happy.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,237},{65,78}}</string>
+				<string>{{0,164},{11,16}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{65,78}</string>
+				<string>{11,16}</string>
 			</dict>
-			<key>player_wark_test/player_walk_2.png</key>
+			<key>banzai/righthand_happy.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,315},{65,78}}</string>
+				<string>{{0,123},{20,20}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{65,78}</string>
+				<string>{20,20}</string>
 			</dict>
-			<key>player_wark_test/player_happy_1.png</key>
+			<key>banzai/rightleg_happy.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,158},{68,79}}</string>
+				<string>{{0,180},{11,16}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{68,79}</string>
+				<string>{11,16}</string>
+			</dict>
+			<key>banzai/clothes_happy.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,72},{51,40}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{51,40}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -65,18 +76,18 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>textureFileName</key>
-			<string>Plist.png</string>
+			<string>PlistOfBanzai.png</string>
 			<key>realTextureFileName</key>
-			<string>Plist.png</string>
+			<string>PlistOfBanzai.png</string>
 			<key>size</key>
-			<string>{70,393}</string>
+			<string>{65,196}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>70</integer>
+			<integer>65</integer>
 			<key>height</key>
-			<integer>393</integer>
+			<integer>196</integer>
 		</dict>
 	</dict>
 </plist>

@@ -64,12 +64,6 @@
           <Image Name="gate_1.png" />
         </Folder>
         <PlistInfo Name="Plist.csi" Type="Plist" />
-        <Image Name="player_happy_2.png" />
-        <Image Name="player_walk_1.png" />
-        <Image Name="player_walk_2.png" />
-        <Image Name="player.png" />
-        <Image Name="player_happy_1.png" />
-        <Project Name="player_walk.csd" Type="Node" />
         <Project Name="WalkSkeletal.csd" Type="Skeleton" />
         <PlistInfo Name="PlistOfWalkSkeletal.csi" Type="Plist" />
         <Folder Name="walk">
@@ -79,6 +73,24 @@
           <Image Name="player_rightleg.png" />
           <Image Name="player_lefthand.png" />
         </Folder>
+        <Folder Name="player_wark_test">
+          <Image Name="player.png" />
+          <Image Name="player_happy_1.png" />
+          <Image Name="player_happy_2.png" />
+          <Project Name="player_walk.csd" Type="Node" />
+          <Image Name="player_walk_1.png" />
+          <Image Name="player_walk_2.png" />
+        </Folder>
+        <Folder Name="banzai">
+          <Image Name="body_happy.png" />
+          <Image Name="lefthand_happy.png" />
+          <Image Name="leftleg_happy.png" />
+          <Image Name="righthand_happy.png" />
+          <Image Name="rightleg_happy.png" />
+          <Image Name="clothes_happy.png" />
+        </Folder>
+        <PlistInfo Name="PlistOfBanzai.csi" Type="Plist" />
+        <Project Name="BanzaiSkeleton.csd" Type="Skeleton" />
       </RootFolder>
     </Group>
   </SolutionFolder>

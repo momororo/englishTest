@@ -208,7 +208,7 @@
       <ObjectData Name="Skeleton" Tag="72" Length="20.0000" RotationSkewX="0.0000" RotationSkewY="0.0000" ctype="SkeletonNodeObjectData">
         <Size X="1.0000" Y="1.0000" />
         <Children>
-          <AbstractNodeData Name="righthand" ActionTag="111691856" ZOrder="4" Tag="96" Length="36.0000" RotationSkewX="-244.5896" RotationSkewY="-244.5896" ctype="BoneNodeObjectData">
+          <AbstractNodeData Name="righthand" ActionTag="111691856" ZOrder="4" Tag="96" Length="36.0000" RotationSkewX="-264.6059" RotationSkewY="-264.6059" ctype="BoneNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="player_lefthand_13" ActionTag="2069770756" Tag="116" RotationSkewX="1.6381" RotationSkewY="1.6381" IconVisible="False" LeftMargin="-2.3500" RightMargin="-20.6500" TopMargin="-7.9326" BottomMargin="-8.0674" ctype="SpriteObjectData">
@@ -229,7 +229,7 @@
             <BlendFunc Src="1" Dst="771" />
             <BoneColor A="255" R="25" G="25" B="25" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lefthand" ActionTag="-1784726985" ZOrder="1" Tag="100" Length="40.0000" RotationSkewX="47.9119" RotationSkewY="47.9119" ctype="BoneNodeObjectData">
+          <AbstractNodeData Name="lefthand" ActionTag="-1784726985" ZOrder="1" Tag="100" Length="40.0000" RotationSkewX="79.9508" RotationSkewY="79.9508" ctype="BoneNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="player_lefthand_9" ActionTag="966623527" Tag="112" RotationSkewX="7.1904" RotationSkewY="7.1904" IconVisible="False" LeftMargin="0.3362" RightMargin="-23.3362" TopMargin="-9.3555" BottomMargin="-6.6445" ctype="SpriteObjectData">
@@ -250,7 +250,7 @@
             <BlendFunc Src="1" Dst="771" />
             <BoneColor A="255" R="25" G="25" B="25" />
           </AbstractNodeData>
-          <AbstractNodeData Name="rightleg" ActionTag="-1056337496" ZOrder="5" Tag="103" Length="36.0000" RotationSkewX="58.5064" RotationSkewY="58.5064" ctype="BoneNodeObjectData">
+          <AbstractNodeData Name="rightleg" ActionTag="-1056337496" ZOrder="5" Tag="103" Length="36.0000" RotationSkewX="82.6059" RotationSkewY="82.6059" ctype="BoneNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="player_rightleg_12" ActionTag="1999135050" Tag="115" RotationSkewX="-89.8815" RotationSkewY="-89.8816" IconVisible="False" LeftMargin="10.7140" RightMargin="-21.7140" TopMargin="-11.4980" BottomMargin="-4.5020" ctype="SpriteObjectData">
@@ -271,7 +271,7 @@
             <BlendFunc Src="1" Dst="771" />
             <BoneColor A="255" R="25" G="25" B="25" />
           </AbstractNodeData>
-          <AbstractNodeData Name="leftleg" ActionTag="260819425" ZOrder="2" Tag="106" Length="34.0000" RotationSkewX="91.2100" RotationSkewY="91.2100" ctype="BoneNodeObjectData">
+          <AbstractNodeData Name="leftleg" ActionTag="260819425" ZOrder="2" Tag="106" Length="34.0000" RotationSkewX="90.2071" RotationSkewY="90.2071" ctype="BoneNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="player_leftleg" ActionTag="1271770501" Tag="111" RotationSkewX="-91.0222" RotationSkewY="-91.0224" IconVisible="False" LeftMargin="10.7327" RightMargin="-21.7327" TopMargin="-10.3148" BottomMargin="-5.6852" ctype="SpriteObjectData">

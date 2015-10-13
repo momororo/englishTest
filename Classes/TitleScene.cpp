@@ -67,6 +67,7 @@ bool TitleScene::init()
     reviewButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*2));
     this->addChild(reviewButton);
     
+    
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
     mainScene -> setName("mainScene");
@@ -98,6 +99,16 @@ bool TitleScene::init()
                 break;
         }
     });
+    
+    auto player = CSLoader::getInstance()->createNode("WalkSkeletal.csb");
+    player -> setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
+    this -> addChild(player);
+    
+    auto playerAction = CSLoader::getInstance()->createTimeline("WalkSkeletal.csb");
+    player -> runAction(playerAction);
+    playerAction -> gotoFrameAndPlay(0, true);
+    
+    player -> runAction(MoveBy::create(10, Vec2(1200,0)));
     
     return true;
 }
