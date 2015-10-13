@@ -20,11 +20,12 @@ public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     
-    //トレーニングボタン生成
-    cocos2d::Menu* createTrainingButton();
-    //復習ボタン生成
-    cocos2d::Menu* createReviewButton();
 
+    //ステージセレクトボタンに動作を設定する。
+    void makeStageButton();
+    
+    //選択したステージに移動
+    void makeMoveButton();
     
     // implement the "static create()" method manually
     CREATE_FUNC(TitleScene);
