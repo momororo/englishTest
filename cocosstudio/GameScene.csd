@@ -1478,7 +1478,7 @@
                 <FileData Type="Normal" Path="GameScene/stage2/lake.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="crocodile_1" ActionTag="723402491" Tag="18" IconVisible="False" LeftMargin="1017.5000" RightMargin="641.5000" TopMargin="562.0700" BottomMargin="62.9300" ctype="SpriteObjectData">
+              <AbstractNodeData Name="crocodile_1" ActionTag="723402491" Tag="18" IconVisible="False" LeftMargin="1017.5007" RightMargin="641.4993" TopMargin="562.0693" BottomMargin="62.9307" ctype="SpriteObjectData">
                 <Size X="45.0000" Y="15.0000" />
                 <Children>
                   <AbstractNodeData Name="crocodile_1_0" ActionTag="-550177081" Tag="37" IconVisible="False" LeftMargin="28.8331" RightMargin="-28.8331" TopMargin="17.0692" BottomMargin="-17.0692" ctype="SpriteObjectData">
@@ -1494,7 +1494,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1040.0000" Y="70.4300" />
+                <Position X="1040.0007" Y="70.4307" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6103" Y="0.1100" />
@@ -1502,11 +1502,11 @@
                 <FileData Type="Normal" Path="GameScene/stage2/crocodile.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="giraffe_1" ActionTag="605026733" Tag="34" IconVisible="False" LeftMargin="692.6700" RightMargin="961.3300" TopMargin="186.6590" BottomMargin="391.3410" ctype="SpriteObjectData">
+              <AbstractNodeData Name="giraffe_1" ActionTag="605026733" Tag="34" IconVisible="False" LeftMargin="692.6700" RightMargin="961.3300" TopMargin="186.6600" BottomMargin="391.3400" ctype="SpriteObjectData">
                 <Size X="50.0000" Y="62.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="717.6700" Y="422.3410" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="717.6700" Y="422.3400" />
+                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4212" Y="0.6599" />
                 <PreSize X="0.0000" Y="0.0000" />
@@ -1538,13 +1538,13 @@
               <AbstractNodeData Name="whale" ActionTag="-131044850" Tag="35" IconVisible="False" LeftMargin="698.0007" RightMargin="829.9993" TopMargin="60.1567" BottomMargin="516.8433" ctype="SpriteObjectData">
                 <Size X="176.0000" Y="63.0000" />
                 <Children>
-                  <AbstractNodeData Name="splash" ActionTag="-729782055" Tag="20" IconVisible="False" LeftMargin="33.6718" RightMargin="104.3282" TopMargin="-23.3700" BottomMargin="55.3700" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="splash" ActionTag="-729782055" Tag="20" IconVisible="False" LeftMargin="33.6751" RightMargin="104.3249" TopMargin="-23.3700" BottomMargin="55.3700" ctype="SpriteObjectData">
                     <Size X="38.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5239" />
-                    <Position X="53.5800" Y="55.3700" />
+                    <Position X="53.5833" Y="55.3700" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3044" Y="0.8789" />
+                    <PrePosition X="0.3045" Y="0.8789" />
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="GameScene/stage2/splash.png" Plist="" />
                     <BlendFunc Src="1" Dst="769" />
@@ -1552,29 +1552,29 @@
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="786.0007" Y="548.3433" />
-                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4613" Y="0.8568" />
                 <PreSize X="0.1033" Y="0.0984" />
                 <FileData Type="Normal" Path="GameScene/stage2/whale.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="penguin_1" ActionTag="-243419521" Tag="22" IconVisible="False" LeftMargin="965.3300" RightMargin="722.6700" TopMargin="40.3217" BottomMargin="577.6783" ctype="SpriteObjectData">
+              <AbstractNodeData Name="penguin_1" ActionTag="-243419521" Tag="22" IconVisible="False" LeftMargin="965.3334" RightMargin="722.6666" TopMargin="40.3217" BottomMargin="577.6783" ctype="SpriteObjectData">
                 <Size X="16.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="973.3300" Y="588.6783" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="973.3334" Y="588.6783" />
+                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5712" Y="0.9198" />
                 <PreSize X="0.0141" Y="0.0344" />
                 <FileData Type="Normal" Path="GameScene/stage2/penguin.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="penguin_2" ActionTag="889112459" Tag="24" IconVisible="False" LeftMargin="969.3300" RightMargin="718.6700" TopMargin="79.8217" BottomMargin="538.1783" ctype="SpriteObjectData">
+              <AbstractNodeData Name="penguin_2" ActionTag="889112459" Tag="24" IconVisible="False" LeftMargin="969.3334" RightMargin="718.6666" TopMargin="79.8217" BottomMargin="538.1783" ctype="SpriteObjectData">
                 <Size X="16.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="977.3300" Y="549.1783" />
-                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+                <Position X="977.3334" Y="549.1783" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5736" Y="0.8581" />
                 <PreSize X="0.0141" Y="0.0344" />
@@ -1585,29 +1585,29 @@
                 <Size X="16.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="995.3300" Y="549.1783" />
-                <Scale ScaleX="-0.7000" ScaleY="0.7000" />
+                <Scale ScaleX="0.7000" ScaleY="0.7000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5841" Y="0.8581" />
                 <PreSize X="0.0141" Y="0.0344" />
                 <FileData Type="Normal" Path="GameScene/stage2/penguin.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="penguin_2_2" ActionTag="1866448009" Tag="28" IconVisible="False" LeftMargin="1007.3300" RightMargin="680.6700" TopMargin="81.8200" BottomMargin="536.1800" ctype="SpriteObjectData">
+              <AbstractNodeData Name="penguin_2_2" ActionTag="1866448009" Tag="28" IconVisible="False" LeftMargin="1007.3286" RightMargin="680.6714" TopMargin="81.8217" BottomMargin="536.1783" ctype="SpriteObjectData">
                 <Size X="16.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1015.3300" Y="547.1800" />
-                <Scale ScaleX="-0.9000" ScaleY="0.9000" />
+                <Position X="1015.3286" Y="547.1783" />
+                <Scale ScaleX="0.9000" ScaleY="0.9000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5959" Y="0.8550" />
                 <PreSize X="0.0141" Y="0.0344" />
                 <FileData Type="Normal" Path="GameScene/stage2/penguin.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="penguin_3" ActionTag="1859791483" Tag="29" RotationSkewY="0.0035" IconVisible="False" LeftMargin="1056.5000" RightMargin="631.5000" TopMargin="16.3100" BottomMargin="601.6900" ctype="SpriteObjectData">
+              <AbstractNodeData Name="penguin_3" ActionTag="1859791483" Tag="29" IconVisible="False" LeftMargin="1056.5000" RightMargin="631.5000" TopMargin="16.3070" BottomMargin="601.6930" ctype="SpriteObjectData">
                 <Size X="16.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1064.5000" Y="612.6900" />
-                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+                <Position X="1064.5000" Y="612.6930" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6247" Y="0.9573" />
                 <PreSize X="0.0000" Y="0.0000" />
@@ -1618,7 +1618,7 @@
                 <Size X="69.0000" Y="56.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="882.7500" Y="417.9430" />
-                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5180" Y="0.6530" />
                 <PreSize X="0.0607" Y="0.0875" />
@@ -1629,7 +1629,7 @@
                 <Size X="69.0000" Y="56.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1074.0000" Y="298.3907" />
-                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6303" Y="0.4662" />
                 <PreSize X="0.0000" Y="0.0000" />
@@ -1640,7 +1640,7 @@
                 <Size X="69.0000" Y="56.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1016.0000" Y="382.3906" />
-                <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5962" Y="0.5975" />
                 <PreSize X="1.0000" Y="1.0000" />
@@ -1823,13 +1823,13 @@
                 <FileData Type="Normal" Path="GameScene/stage3/chiken.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="sausage" ActionTag="-2075979641" Tag="55" IconVisible="False" LeftMargin="1386.0000" RightMargin="214.0000" TopMargin="45.7026" BottomMargin="558.2974" ctype="SpriteObjectData">
+              <AbstractNodeData Name="sausage" ActionTag="-2075979641" Tag="55" IconVisible="False" LeftMargin="1375.6000" RightMargin="224.4000" TopMargin="45.7026" BottomMargin="558.2974" ctype="SpriteObjectData">
                 <Size X="104.0000" Y="36.0000" />
                 <AnchorPoint ScaleX="0.6000" ScaleY="0.5000" />
-                <Position X="1448.4000" Y="576.2974" />
+                <Position X="1438.0000" Y="576.2974" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8500" Y="0.9005" />
+                <PrePosition X="0.8439" Y="0.9005" />
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="GameScene/stage3/sausage.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />

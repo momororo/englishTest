@@ -31,11 +31,11 @@
             <Image Name="line_2.png" />
             <Image Name="lion.png" />
             <Image Name="splash.png" />
-            <Image Name="whale.png" />
             <Image Name="crocodile.png" />
             <Image Name="elephant.png" />
             <Image Name="penguin.png" />
             <Image Name="lake.png" />
+            <Image Name="whale.png" />
           </Folder>
           <Folder Name="stage3">
             <Image Name="cake.png" />
@@ -56,7 +56,41 @@
           <Image Name="bt_stage3_tapped.png" />
           <Image Name="clear_1.png" />
           <Image Name="clear_3.png" />
+          <Image Name="backStage1.png" />
+          <Image Name="backStage2.png" />
+          <Image Name="goStage2.png" />
+          <Image Name="goStage3.png" />
+          <Image Name="gate_2.png" />
+          <Image Name="gate_1.png" />
         </Folder>
+        <PlistInfo Name="Plist.csi" Type="Plist" />
+        <Project Name="WalkSkeletal.csd" Type="Skeleton" />
+        <PlistInfo Name="PlistOfWalkSkeletal.csi" Type="Plist" />
+        <Folder Name="walk">
+          <Image Name="player_body.png" />
+          <Image Name="player_leftleg.png" />
+          <Image Name="player_righthand.png" />
+          <Image Name="player_rightleg.png" />
+          <Image Name="player_lefthand.png" />
+        </Folder>
+        <Folder Name="player_wark_test">
+          <Image Name="player.png" />
+          <Image Name="player_happy_1.png" />
+          <Image Name="player_happy_2.png" />
+          <Project Name="player_walk.csd" Type="Node" />
+          <Image Name="player_walk_1.png" />
+          <Image Name="player_walk_2.png" />
+        </Folder>
+        <Folder Name="banzai">
+          <Image Name="body_happy.png" />
+          <Image Name="lefthand_happy.png" />
+          <Image Name="leftleg_happy.png" />
+          <Image Name="righthand_happy.png" />
+          <Image Name="rightleg_happy.png" />
+          <Image Name="clothes_happy.png" />
+        </Folder>
+        <PlistInfo Name="PlistOfBanzai.csi" Type="Plist" />
+        <Project Name="BanzaiSkeleton.csd" Type="Skeleton" />
       </RootFolder>
     </Group>
   </SolutionFolder>

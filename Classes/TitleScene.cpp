@@ -46,6 +46,27 @@ bool TitleScene::init()
     CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button70.mp3");
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
     
+    //背景の生成
+    Sprite *bkWhite = Sprite::create();//下地
+    bkWhite->setTextureRect(Rect(0,0,640,1136));
+    bkWhite->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
+    bkWhite->setColor(Color3B::WHITE);//ノート
+    this->addChild(bkWhite);
+    Sprite *bk = Sprite::create(defaultBk);
+    bk->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
+    bkWhite->addChild(bk);
+    
+    //トレーニングボタンの作成
+    auto *trainingButton = createTrainingButton();
+    trainingButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*3.5));
+    this->addChild(trainingButton);
+    
+    //復習ボタンの作成
+    auto *reviewButton = createReviewButton();
+    reviewButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*2));
+    this->addChild(reviewButton);
+    
+    
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
     mainScene -> setName("mainScene");
