@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Skeleton" Name="LeftWalkSkeleton" ID="268c9190-ca25-457a-84cf-1762f3802223" Version="2.3.2.3" />
+  <PropertyGroup Type="Skeleton" Name="LeftWalkSkeletal" ID="268c9190-ca25-457a-84cf-1762f3802223" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="105" Speed="1.0000">

@@ -456,13 +456,13 @@ void TitleScene::walkPiyoToLeft(){
     
     //ぴよを非表示にしてアルクピヨを表示
     this -> getChildByName("piyo") -> setVisible(false);
-    auto walkPiyo = CSLoader::getInstance()->createNode("LeftWalkSkeleton.csb");
+    auto walkPiyo = CSLoader::getInstance()->createNode("LeftWalkSkeletal.csb");
     walkPiyo -> setName("walkPiyo");
     walkPiyo -> setPosition(this -> getChildByName("piyo")-> getPosition());
     this -> addChild(walkPiyo);
     
     //cocostudioで設定したフレームの読み込み→gotoFrameAndPlay(読み込むフレーム位置、ループの可否)
-    auto walkAction = CSLoader::getInstance()->createTimeline("LeftWalkSkeleton.csb");
+    auto walkAction = CSLoader::getInstance()->createTimeline("LeftWalkSkeletal.csb");
     walkPiyo -> runAction(walkAction);
     walkAction -> gotoFrameAndPlay(0, true);
 
