@@ -55,18 +55,7 @@ bool TitleScene::init()
     Sprite *bk = Sprite::create(defaultBk);
     bk->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
     bkWhite->addChild(bk);
-    
-    //トレーニングボタンの作成
-    auto *trainingButton = createTrainingButton();
-    trainingButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*3.5));
-    this->addChild(trainingButton);
-    
-    //復習ボタンの作成
-    auto *reviewButton = createReviewButton();
-    reviewButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*2));
-    this->addChild(reviewButton);
-    
-    
+        
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
     mainScene -> setName("mainScene");
@@ -115,6 +104,10 @@ void TitleScene::makeStageButton(){
         
         auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName(StringUtils::format("Button_%d",idx)));
         
+        if(idx != 1){
+            button -> setTouchEnabled(false);
+        }
+        
         //動作設定
         button -> addTouchEventListener([&,idx](Ref* pSender,ui::Widget::TouchEventType type){
             
@@ -147,17 +140,33 @@ void TitleScene::makeMoveButton(){
 
             auto goSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage2"));
             
+            
             //矢印を非表示&タップ不可に
             goSt2 -> setVisible(false);
             goSt2 -> setTouchEnabled(false);
             
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_1"));
+            button -> setTouchEnabled(false);
+
+            
             
             auto bk = this ->getChildByName("mainScene")->getChildByName("background");
+            
+
+            //ピヨを歩行モードに
+            this -> walkPiyoToRight();
+            
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
+
+
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
-                //キャラクターの動作の停止
+                
+
+                this -> stopPiyo();
                 
                 //後で書こうね
                 
@@ -169,9 +178,14 @@ void TitleScene::makeMoveButton(){
                 backSt1 -> setVisible(true);
                 backSt1 -> setTouchEnabled(true);
                 
+                //ボタンを押せるように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+                button -> setTouchEnabled(true);
+
 
                 
             });
+            
             
         
             auto seq = Sequence::create(action1, action2, NULL);
@@ -185,7 +199,7 @@ void TitleScene::makeMoveButton(){
 
     
 /*********goStage3*************/
-    //goStage2の動作設定
+    //goStage3の動作設定
     auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
     //動作設定
     goSt3 -> addTouchEventListener([&](Ref* pSender,ui::Widget::TouchEventType type){
@@ -199,20 +213,30 @@ void TitleScene::makeMoveButton(){
             goSt3 -> setVisible(false);
             goSt3 -> setTouchEnabled(false);
             
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+            button -> setTouchEnabled(false);
+
+            
             auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
 
             //矢印を非表示&タップ不可に
             backSt1 -> setVisible(false);
             backSt1 -> setTouchEnabled(false);
             
+            //ピヨを歩行モードに
+            this -> walkPiyoToRight();
             
             
-            auto piyo = this ->getChildByName("piyo");
+            auto piyo = this ->getChildByName("walkPiyo");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(selfFrame.width/2,0));
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
+                
                 //キャラクターの動作の停止
+                this -> stopPiyo();
                 
                 //後で書こうね
                 
@@ -220,6 +244,11 @@ void TitleScene::makeMoveButton(){
                 auto backSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage2"));
                 backSt2 -> setVisible(true);
                 backSt2 -> setTouchEnabled(true);
+                
+                //ボタンを押せるように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_3"));
+                button -> setTouchEnabled(true);
+
                 
                 
                 
@@ -237,7 +266,7 @@ void TitleScene::makeMoveButton(){
     
 
 /*********backStage1*************/
-    //goStage2の動作設定
+    //backStage1の動作設定
     auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
     //動作設定
     backSt1 -> addTouchEventListener([&](Ref* pSender,ui::Widget::TouchEventType type){
@@ -251,6 +280,11 @@ void TitleScene::makeMoveButton(){
             goSt3 -> setVisible(false);
             goSt3 -> setTouchEnabled(false);
             
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+            button -> setTouchEnabled(false);
+
+            
             auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
             
             //矢印を非表示&タップ不可に
@@ -258,13 +292,18 @@ void TitleScene::makeMoveButton(){
             backSt1 -> setTouchEnabled(false);
             
             
+            //ピヨを歩行モードに
+            this -> walkPiyoToLeft();
+            
             
             auto bk = this ->getChildByName("mainScene")->getChildByName("background");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(selfFrame.width/2,0));
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
+                
                 //キャラクターの動作の停止
+                this -> stopPiyo();
                 
                 //後で書こうね
                 
@@ -272,6 +311,11 @@ void TitleScene::makeMoveButton(){
                 auto goSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage2"));
                 goSt2 -> setVisible(true);
                 goSt2 -> setTouchEnabled(true);
+                
+                //ボタンを押せるように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_1"));
+                button -> setTouchEnabled(true);
+
                 
                 
                 
@@ -303,16 +347,23 @@ void TitleScene::makeMoveButton(){
             backSt2 -> setVisible(false);
             backSt2 -> setTouchEnabled(false);
             
+            //ボタンを押せないように
+            auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_3"));
+            button -> setTouchEnabled(false);
+
             
-            auto piyo = this ->getChildByName("piyo");
+            //ピヨを歩行モードに
+            this -> walkPiyoToLeft();
+            
+            
+            auto piyo = this ->getChildByName("walkPiyo");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
                 
                 //キャラクターの動作の停止
-                
-                //後で書こうね
+                this -> stopPiyo();
                 
                 //ステージ2の矢印を表示
                 auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
@@ -322,6 +373,11 @@ void TitleScene::makeMoveButton(){
                 auto backSt1 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage1"));
                 backSt1 -> setVisible(true);
                 backSt1 -> setTouchEnabled(true);
+                
+                //ボタンを押せないように
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
+                button -> setTouchEnabled(true);
+
                 
                 
                 
@@ -338,5 +394,71 @@ void TitleScene::makeMoveButton(){
 /*********backStage2終*************/
 
     
+    
+}
+
+void TitleScene::walkPiyoToRight(){
+    
+    //ぴよを非表示にしてアルクピヨを表示
+    this -> getChildByName("piyo") -> setVisible(false);
+    auto walkPiyo = CSLoader::getInstance()->createNode("WalkSkeletal.csb");
+    walkPiyo -> setName("walkPiyo");
+    walkPiyo -> setPosition(this -> getChildByName("piyo")-> getPosition());
+    this -> addChild(walkPiyo);
+    
+    //cocostudioで設定したフレームの読み込み→gotoFrameAndPlay(読み込むフレーム位置、ループの可否)
+    auto walkAction = CSLoader::getInstance()->createTimeline("WalkSkeletal.csb");
+    walkPiyo -> runAction(walkAction);
+    walkAction -> gotoFrameAndPlay(0, true);
+    
+    
+}
+
+void TitleScene::walkPiyoToLeft(){
+
+    //ぴよを非表示にしてアルクピヨを表示
+    this -> getChildByName("piyo") -> setVisible(false);
+    auto walkPiyo = CSLoader::getInstance()->createNode("WalkSkeletal.csb");
+    walkPiyo -> setName("walkPiyo");
+    walkPiyo -> setPosition(this -> getChildByName("piyo")-> getPosition());
+    
+    //各パーツを配列で取得
+    auto parts = walkPiyo -> getChildren();
+    //パーツ毎に処理
+    for (auto part : parts){
+
+        //パーツの中から画像部分を取得
+        auto images = part -> getChildren();
+        //画像への処理
+        for(auto image : images){
+            //スプライトへキャスト
+            auto spriteOfImage = dynamic_cast<Sprite*>(image);
+            //画像を反転
+            spriteOfImage -> setFlippedX(true);
+        }
+ 
+        
+    }
+    
+    this -> addChild(walkPiyo);
+    
+    
+    //cocostudioで設定したフレームの読み込み→gotoFrameAndPlay(読み込むフレーム位置、ループの可否)
+    auto walkAction = CSLoader::getInstance()->createTimeline("WalkSkeletal.csb");
+    
+    walkPiyo -> runAction(walkAction->reverse());
+    
+    walkAction -> gotoFrameAndPlay(0, true);
+
+    
+}
+
+void TitleScene::stopPiyo(){
+    
+    //キャラクターの入れ替え
+    this -> getChildByName("piyo") -> setPosition(this -> getChildByName("walkPiyo") -> getPosition());
+    this -> getChildByName("piyo") -> setVisible(true);
+    
+    this -> removeChildByName("walkPiyo");
     
 }

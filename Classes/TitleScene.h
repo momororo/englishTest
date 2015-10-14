@@ -30,6 +30,10 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(TitleScene);
     
+    //ピヨ歩行
+    void walkPiyoToRight();
+    void walkPiyoToLeft();
+    void stopPiyo();
     
 };
 
