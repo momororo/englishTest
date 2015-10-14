@@ -55,18 +55,7 @@ bool TitleScene::init()
     Sprite *bk = Sprite::create(defaultBk);
     bk->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
     bkWhite->addChild(bk);
-    
-    //トレーニングボタンの作成
-    auto *trainingButton = createTrainingButton();
-    trainingButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*3.5));
-    this->addChild(trainingButton);
-    
-    //復習ボタンの作成
-    auto *reviewButton = createReviewButton();
-    reviewButton->setPosition(Vec2(selfFrame.width/2,selfFrame.height/11*2));
-    this->addChild(reviewButton);
-    
-    
+        
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
     mainScene -> setName("mainScene");
@@ -163,11 +152,21 @@ void TitleScene::makeMoveButton(){
             
             
             auto bk = this ->getChildByName("mainScene")->getChildByName("background");
+            
+
+            //ピヨを歩行モードに
+            this -> walkPiyoToRight();
+            
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
+
+
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
-                //キャラクターの動作の停止
+                
+
+                this -> stopPiyo();
                 
                 //後で書こうね
                 
@@ -225,14 +224,19 @@ void TitleScene::makeMoveButton(){
             backSt1 -> setVisible(false);
             backSt1 -> setTouchEnabled(false);
             
+            //ピヨを歩行モードに
+            this -> walkPiyoToRight();
             
             
-            auto piyo = this ->getChildByName("piyo");
+            auto piyo = this ->getChildByName("walkPiyo");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(selfFrame.width/2,0));
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
+                
                 //キャラクターの動作の停止
+                this -> stopPiyo();
                 
                 //後で書こうね
                 
@@ -288,13 +292,18 @@ void TitleScene::makeMoveButton(){
             backSt1 -> setTouchEnabled(false);
             
             
+            //ピヨを歩行モードに
+            this -> walkPiyoToLeft();
+            
             
             auto bk = this ->getChildByName("mainScene")->getChildByName("background");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(selfFrame.width/2,0));
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
+                
                 //キャラクターの動作の停止
+                this -> stopPiyo();
                 
                 //後で書こうね
                 
@@ -343,16 +352,18 @@ void TitleScene::makeMoveButton(){
             button -> setTouchEnabled(false);
 
             
+            //ピヨを歩行モードに
+            this -> walkPiyoToLeft();
             
-            auto piyo = this ->getChildByName("piyo");
+            
+            auto piyo = this ->getChildByName("walkPiyo");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
                 
                 //キャラクターの動作の停止
-                
-                //後で書こうね
+                this -> stopPiyo();
                 
                 //ステージ2の矢印を表示
                 auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
@@ -383,5 +394,71 @@ void TitleScene::makeMoveButton(){
 /*********backStage2終*************/
 
     
+    
+}
+
+void TitleScene::walkPiyoToRight(){
+    
+    //ぴよを非表示にしてアルクピヨを表示
+    this -> getChildByName("piyo") -> setVisible(false);
+    auto walkPiyo = CSLoader::getInstance()->createNode("WalkSkeletal.csb");
+    walkPiyo -> setName("walkPiyo");
+    walkPiyo -> setPosition(this -> getChildByName("piyo")-> getPosition());
+    this -> addChild(walkPiyo);
+    
+    //cocostudioで設定したフレームの読み込み→gotoFrameAndPlay(読み込むフレーム位置、ループの可否)
+    auto walkAction = CSLoader::getInstance()->createTimeline("WalkSkeletal.csb");
+    walkPiyo -> runAction(walkAction);
+    walkAction -> gotoFrameAndPlay(0, true);
+    
+    
+}
+
+void TitleScene::walkPiyoToLeft(){
+
+    //ぴよを非表示にしてアルクピヨを表示
+    this -> getChildByName("piyo") -> setVisible(false);
+    auto walkPiyo = CSLoader::getInstance()->createNode("WalkSkeletal.csb");
+    walkPiyo -> setName("walkPiyo");
+    walkPiyo -> setPosition(this -> getChildByName("piyo")-> getPosition());
+    
+    //各パーツを配列で取得
+    auto parts = walkPiyo -> getChildren();
+    //パーツ毎に処理
+    for (auto part : parts){
+
+        //パーツの中から画像部分を取得
+        auto images = part -> getChildren();
+        //画像への処理
+        for(auto image : images){
+            //スプライトへキャスト
+            auto spriteOfImage = dynamic_cast<Sprite*>(image);
+            //画像を反転
+            spriteOfImage -> setFlippedX(true);
+        }
+ 
+        
+    }
+    
+    this -> addChild(walkPiyo);
+    
+    
+    //cocostudioで設定したフレームの読み込み→gotoFrameAndPlay(読み込むフレーム位置、ループの可否)
+    auto walkAction = CSLoader::getInstance()->createTimeline("WalkSkeletal.csb");
+    
+    walkPiyo -> runAction(walkAction->reverse());
+    
+    walkAction -> gotoFrameAndPlay(0, true);
+
+    
+}
+
+void TitleScene::stopPiyo(){
+    
+    //キャラクターの入れ替え
+    this -> getChildByName("piyo") -> setPosition(this -> getChildByName("walkPiyo") -> getPosition());
+    this -> getChildByName("piyo") -> setVisible(true);
+    
+    this -> removeChildByName("walkPiyo");
     
 }
