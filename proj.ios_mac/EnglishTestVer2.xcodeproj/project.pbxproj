@@ -78,6 +78,8 @@
 		A44FC0A31BCE32B200AEE934 /* RightWalkSkeletal.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0A11BCE32B200AEE934 /* RightWalkSkeletal.csb */; settings = {ASSET_TAGS = (); }; };
 		A44FC0A61BCE341700AEE934 /* BanzaiSkeletal.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0A41BCE341700AEE934 /* BanzaiSkeletal.csb */; settings = {ASSET_TAGS = (); }; };
 		A44FC0A71BCE341700AEE934 /* LeftWalkSkeletal.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0A51BCE341700AEE934 /* LeftWalkSkeletal.csb */; settings = {ASSET_TAGS = (); }; };
+		A44FC0A91BCF8CFE00AEE934 /* gameScene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0A81BCF8CFE00AEE934 /* gameScene.mp3 */; settings = {ASSET_TAGS = (); }; };
+		A44FC0AB1BCF8D0700AEE934 /* stageSelect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0AA1BCF8D0700AEE934 /* stageSelect.mp3 */; settings = {ASSET_TAGS = (); }; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -203,6 +205,8 @@
 		A44FC0A11BCE32B200AEE934 /* RightWalkSkeletal.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = RightWalkSkeletal.csb; sourceTree = "<group>"; };
 		A44FC0A41BCE341700AEE934 /* BanzaiSkeletal.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = BanzaiSkeletal.csb; sourceTree = "<group>"; };
 		A44FC0A51BCE341700AEE934 /* LeftWalkSkeletal.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeftWalkSkeletal.csb; sourceTree = "<group>"; };
+		A44FC0A81BCF8CFE00AEE934 /* gameScene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameScene.mp3; sourceTree = "<group>"; };
+		A44FC0AA1BCF8D0700AEE934 /* stageSelect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stageSelect.mp3; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -333,6 +337,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A44FC0AA1BCF8D0700AEE934 /* stageSelect.mp3 */,
+				A44FC0A81BCF8CFE00AEE934 /* gameScene.mp3 */,
 				A44FC0A41BCE341700AEE934 /* BanzaiSkeletal.csb */,
 				A44FC0A51BCE341700AEE934 /* LeftWalkSkeletal.csb */,
 				A44FC0A11BCE32B200AEE934 /* RightWalkSkeletal.csb */,
@@ -544,6 +550,7 @@
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				A44FC0A61BCE341700AEE934 /* BanzaiSkeletal.csb in Resources */,
+				A44FC0A91BCF8CFE00AEE934 /* gameScene.mp3 in Resources */,
 				A44FC0A71BCE341700AEE934 /* LeftWalkSkeletal.csb in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				A44FC0771BC3971A00AEE934 /* titleScene in Resources */,
@@ -560,6 +567,7 @@
 				A44FC07F1BC6469A00AEE934 /* piyo_1.png in Resources */,
 				045C0BFC1BBD0DEA001C3A47 /* question.csv in Resources */,
 				A44FC0751BC3971A00AEE934 /* GameScene in Resources */,
+				A44FC0AB1BCF8D0700AEE934 /* stageSelect.mp3 in Resources */,
 				A44FC0781BC3971A00AEE934 /* TitleScene.csb in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
