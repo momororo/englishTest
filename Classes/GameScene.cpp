@@ -134,6 +134,7 @@ void GameScene::onTouchCancelled(Touch *pTouch, Event *pEvent)
 void GameScene::makeQuestionText(){
     
     //問題文を削除
+    
     this->removeChildByTag(100);
     
     //リストから問題を選ぶ
