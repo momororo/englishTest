@@ -1,5 +1,5 @@
 <PlistInfoProjectFile>
-  <PropertyGroup Type="Plist" Name="PlistOfWalkSkeletal" ID="3cdffdee-ce42-48ee-8969-c9c28bee80a4" Version="2.3.2.3" />
+  <PropertyGroup Name="PlistOfWalkSkeletal" Type="Plist" ID="3cdffdee-ce42-48ee-8969-c9c28bee80a4" Version="2.3.3.0" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
       <FilePathData Path="walk/player_body.png" />

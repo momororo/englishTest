@@ -23,7 +23,7 @@ Vector<Question*>* ImportCSV::importCSV()
     //最初の行は列名のため1からループスタート
     for (int i = 1; i < (int)balls.size()-1 ; i ++) {
         
-        //1行をカンマをを区切りにして分割する
+        //1行をカンマを区切りにして分割する
         ValueVector params = split(balls.at(i).asString(), ",");
         //オブジェクトを宣言
         Question *question = new Question;

@@ -1,5 +1,5 @@
-<GameProjectFile>
-  <PropertyGroup Type="Skeleton" Name="BanzaiSkeleton" ID="cd7db470-9665-4aba-bca4-53dc73f0adcd" Version="2.3.2.3" />
+<GameFile>
+  <PropertyGroup Name="BanzaiSkeletal" Type="Skeleton" ID="cd7db470-9665-4aba-bca4-53dc73f0adcd" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="60" Speed="1.0000">
@@ -119,7 +119,7 @@
         </Timeline>
       </Animation>
       <ObjectData Name="Skeleton" Tag="142" Length="20.0000" RotationSkewX="0.0000" RotationSkewY="0.0000" ctype="SkeletonNodeObjectData">
-        <Size X="1.0000" Y="1.0000" />
+        <Size X="0.0000" Y="0.0000" />
         <Children>
           <AbstractNodeData Name="body" ActionTag="948593731" ZOrder="1" Tag="144" Length="35.0000" RotationSkewX="-89.4595" RotationSkewY="-89.4595" ctype="BoneNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
@@ -256,4 +256,4 @@
       </ObjectData>
     </Content>
   </Content>
-</GameProjectFile>
+</GameFile>
