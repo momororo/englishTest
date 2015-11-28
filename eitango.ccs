@@ -92,6 +92,29 @@
         <PlistInfo Name="PlistOfBanzai.csi" Type="Plist" />
         <Project Name="BanzaiSkeletal.csd" Type="Skeleton" />
         <Project Name="LeftWalkSkeletal.csd" Type="Skeleton" />
+        <PlistInfo Name="PlistOfQuestion.csi" Type="Plist" />
+        <Folder Name="question">
+          <Image Name="bear.png" />
+          <Image Name="cat.png" />
+          <Image Name="cow.png" />
+          <Image Name="dog.png" />
+          <Image Name="elephant.png" />
+          <Image Name="giraffe.png" />
+          <Image Name="gorilla.png" />
+          <Image Name="hippopotamus.png" />
+          <Image Name="horse.png" />
+          <Image Name="lion.png" />
+          <Image Name="monkey.png" />
+          <Image Name="mouse.png" />
+          <Image Name="panda.png" />
+          <Image Name="pig.png" />
+          <Image Name="rabbit.png" />
+          <Image Name="sheep.png" />
+          <Image Name="tiger.png" />
+          <Image Name="whale.png" />
+          <Image Name="wolf.png" />
+          <Image Name="zebra.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>question/cow.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{634,671},{276,260}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{276,260}</string>
+			</dict>
+			<key>question/elephant.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{647,411},{321,260}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{321,260}</string>
+			</dict>
+			<key>question/horse.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{350,295}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{350,295}</string>
+			</dict>
+			<key>question/lion.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{304,547},{330,251}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{330,251}</string>
+			</dict>
+			<key>question/mouse.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,295},{287,304}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{287,304}</string>
+			</dict>
+			<key>question/sheep.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,582},{318,228}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{318,228}</string>
+			</dict>
+			<key>question/tiger.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{228,798},{354,195}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{354,195}</string>
+			</dict>
+			<key>question/whale.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{700,0},{411,216}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{411,216}</string>
+			</dict>
+			<key>question/wolf.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{304,295},{343,252}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{343,252}</string>
+			</dict>
+			<key>question/zebra.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{350,0},{350,295}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{350,295}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>PlistOfQuestion.png</string>
+			<key>realTextureFileName</key>
+			<string>PlistOfQuestion.png</string>
+			<key>size</key>
+			<string>{1024,1024}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>1024</integer>
+		</dict>
+	</dict>
+</plist>

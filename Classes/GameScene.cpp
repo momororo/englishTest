@@ -88,6 +88,8 @@ bool GameScene::init()
     bk->setName("bk");
     this->addChild(bk);
 
+    
+    //問題文の抜き出し
     questions =  SaveSQL::sqliteGetValueForKey("number");
     
     if( questions->size() == 0){
@@ -144,24 +146,31 @@ void GameScene::onTouchCancelled(Touch *pTouch, Event *pEvent)
 //問題文作成
 void GameScene::makeQuestionText(){
     
-    //selectStageの数字を元にquestionsの種類を決める 1->number,2->animal,3->food
-    //実装予定(switch分？)
+    //問題文を削除
     
-    //選択された種類のファイル取り出し
-    questions = SaveSQL::sqliteGetValueForKey("number");
+    this->removeChildByTag(100);
     
-    //問題を実装
+    //リストから問題を選ぶ
+    Question* question = ListOfQuestions->getRandomObject();
     
     
-    Label *test1 = Label::createWithSystemFont(questions->at(0)->japanese,defaultFont,30);
-    test1->setPosition(selfFrame.width/2,selfFrame.height/2);
-    test1->setTextColor(Color4B::BLACK);
-    this->addChild(test1);
+    //リストから選ばれた問題を除外する。
+    ListOfQuestions->eraseObject(question);
     
-    Label *test2 = Label::createWithSystemFont(questions->at(0)->english,defaultFont,30);
-    test2->setPosition(selfFrame.width/2,selfFrame.height/3*2);
-    test2->setTextColor(Color4B::BLACK);
-    this->addChild(test2);
+    
+    //問題を表示する(ここを画像に変えればよし)
+    questionLabel = Label::createWithSystemFont(question->english,defaultFont,30);
+    questionLabel->setPosition(selfFrame.width/2,selfFrame.height/2);
+    questionLabel->setTextColor(Color4B::BLACK);
+    
+    //後で使うよ
+    questionLabel->setName(question->english);
+    //後で使うよ
+    questionLabel->setTag(100);
+    
+    this->addChild(questionLabel);
+    
+    
 
 }
 
