@@ -48,6 +48,11 @@ public:
 
     //配列
     cocos2d::Vector<Question*> *questions = new cocos2d::Vector<Question*>;
+    //配列2(出題リスト)
+    cocos2d::Vector<Question*> *ListOfQuestions = new cocos2d::Vector<Question*>;
+    //選ばれた問題
+    cocos2d::Label* questionLabel;
+    
     
     //問題カウント
     int questionCount = 0;

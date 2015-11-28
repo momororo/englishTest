@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "TitleScene.h"
+#include "GameScene.h"
 #include "SaveSQL.h"
 #include "TopScene.h"
 #include "GameScene.h"

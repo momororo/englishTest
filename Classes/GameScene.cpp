@@ -94,32 +94,17 @@ bool GameScene::init()
         log("取得しっぱい");
         return true;
     }
-/*
-    for(int idx = 0 ; idx < questions->size(); idx++){
-        log("no = %d、 questionText=%s、choiceText=%s,answertTag=%d,answertText=%s,commentary=%s,correctCount=%d、 incorrectCount=%d、reviewFlag=%d\n",questions->at(idx)->questionId,questions->at(idx)->questionText.c_str(),questions->at(idx)->choiceText.c_str(),questions->at(idx)->answerTag,questions->at(idx)->answerText.c_str(),questions->at(idx)->commentary.c_str(), questions->at(idx)->correctCount,questions->at(idx)->incorrectCount,questions->at(idx)->reviewFlag);
-    };
-*/
     
-/*文章を生成する処理
-    
-    //1行を"¥n"を区切りにして分割する
-    vector<string> params = split(questions->at(0)->commentary.c_str(), "¥n");
-    //ラベルに文字を入れていく
-    for (int idx = 0; idx < params.size(); idx++){
-        auto label = Label::createWithTTF(params.at(idx), defaultFont, 30);
-        label -> setTextColor(Color4B::BLACK);
-        label -> setAnchorPoint(Vec2(0.0f, 0.5f));
-        if(commentaryLabels->size() == 0){
-            label->setPosition(Vec2(selfFrame.width/10,selfFrame.height/5*3));
-        }else{
-            label->setPosition(Vec2(selfFrame.width/10,commentaryLabels->at(commentaryLabels->size()-1)->getPositionY()-commentaryLabels->at(commentaryLabels->size()-1)->getContentSize().height/2 - label->getContentSize().height/2));
-            
-        }
-        bk->addChild(label);
-        commentaryLabels->pushBack(label);
-
+    for(int idx = 0 ; idx < questions->size() ; idx++){
+        log("%s",questions->at(idx)->english.c_str());
     }
-*/
+
+    
+    
+    //出題リストの作成(questions)のコピー
+    ListOfQuestions = questions;
+    
+    
   
     //問題文作成
     makeQuestionText();
@@ -133,6 +118,10 @@ bool GameScene::init()
 //タッチ開始イベント
 bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
 {
+    
+    makeQuestionText();
+    makeChoiceText();
+    
     
     return true;
 }
@@ -178,6 +167,90 @@ void GameScene::makeQuestionText(){
 
 //選択肢作成
 void GameScene::makeChoiceText(){
+    
+    //前回のお掃除
+    for(int idx = 0 ; idx < 4; idx++){
+        this->removeChildByTag(200);
+    }
+    
+    //選択肢の配列作っちゃう
+//    Vector<Sprite*> *choices = new Vector<Sprite*>;
+    Vector<Label*> *choices = new Vector<Label*>;
+
+    
+    
+    //答えを置く場所を決める
+    int answerPoint = arc4random_uniform(4);
+    
+    //問題文と既存の選択肢が重複しないように選択肢を作成していく。
+    for(int count = 0; count < 4;){
+        
+        
+        //リストから選択肢を取る。
+        Question* choice = questions->getRandomObject();
+        
+        
+        //問題文と被っていれば再抽選
+        if(choice->english == questionLabel->getName()){
+            continue;
+        }
+        
+        
+        bool continueFlag = false;
+        
+        //既存の選択肢と被っていれば再抽選のフラグへ
+        for(int idx = 0 ; idx < count ; idx++){
+
+            if(choice->english == choices->at(choices->size()-1)->getName()){
+                continueFlag = true;
+                continue;
+            }
+            
+        }
+        //再抽選
+        if(continueFlag == true){continue;}
+        
+        //スプライトを作成して設置
+//        Sprite* sp = Sprite::create(choice->english);
+        Label* sp = Label::createWithSystemFont(choice->english,defaultFont,30);
+
+        sp->setName(choice->english);
+        
+        //答えを置く回はスプライトを置き換え
+        if(count == answerPoint){
+//            sp = Sprite::create(questionLabel->getName());
+            sp = Label::createWithSystemFont(questionLabel->getName(),defaultFont,30);
+            sp->setName(questionLabel->getName());
+        }
+        
+        sp->setTextColor(Color4B::BLACK);
+        
+        Vec2 pos;
+        //回数に合わせて置く場所を決定する
+        switch (count) {
+            case 0:pos = Vec2(300, 100);break;
+            case 1:pos = Vec2(300, 200);break;
+            case 2:pos = Vec2(300, 300);break;
+            case 3:pos = Vec2(300, 400);break;
+            default:break;
+        }
+        
+        sp->setPosition(pos);
+        
+        //addchild
+        this->addChild(sp);
+        //削除用
+        sp->setTag(200);
+        
+        //count足し込み
+        count++;
+        
+        //choicesに追加
+        choices->pushBack(sp);
+        
+        
+    }
+    
 
 }
 
