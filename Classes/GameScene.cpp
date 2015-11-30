@@ -74,23 +74,12 @@ bool GameScene::init()
     this->addChild(bk);
 
     
-    //問題文の抜き出し
-    questions =  SaveSQL::sqliteGetValueForKey("number");
     
-    if( questions->size() == 0){
-        log("取得しっぱい");
-        return true;
-    }
+    //出題リストの抜き出し 10問なので10
+    ListOfQuestions = SaveSQL::sqliteGetValueForKey("number", 10);
     
-    for(int idx = 0 ; idx < questions->size() ; idx++){
-        log("%s",questions->at(idx)->english.c_str());
-    }
-
-    
-    
-    //出題リストの作成(questions)のコピー
-    ListOfQuestions = questions;
-    
+    //問題文の抜き出し 全部抜き出したいから適当に50
+    questions =  SaveSQL::sqliteGetValueForKey("number",50);
     
   
     //問題文作成

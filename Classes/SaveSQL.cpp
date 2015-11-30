@@ -81,7 +81,7 @@ void SaveSQL::sqliteCreateTable(){
 }
 
 //keyから値を取り出す。
-Vector<Question*> *SaveSQL::sqliteGetValueForKey(const char *key){
+Vector<Question*> *SaveSQL::sqliteGetValueForKey(const char *key, int limit){
     
     sqlite3 *db = NULL;
     //配列を作成
@@ -92,7 +92,7 @@ Vector<Question*> *SaveSQL::sqliteGetValueForKey(const char *key){
 //種別に合わせて取り出す問題を決める
 
         //sql コマンドの作成
-        std::string sql = StringUtils::format("SELECT * FROM questions WHERE type = '%s' ORDER BY RANDOM() LIMIT 10",key);
+        std::string sql = StringUtils::format("SELECT * FROM questions WHERE type = '%s' ORDER BY RANDOM() LIMIT %d",key,limit);
 
         
         //const char型に変換
