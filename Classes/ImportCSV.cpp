@@ -19,7 +19,7 @@ Vector<Question*>* ImportCSV::importCSV()
     //ファイルの指定
     std::string csvStr = FileUtils::getInstance()->getStringFromFile("question.csv");
     //改行を区切りにして分割する
-    ValueVector balls = split(csvStr, "\n");
+    ValueVector balls = split(csvStr, "\r");
     //最初の行は列名のため1からループスタート
     for (int i = 1; i < (int)balls.size()-1 ; i ++) {
         
