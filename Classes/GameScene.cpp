@@ -104,11 +104,15 @@ bool GameScene::init()
     
     //画像のリストを読込
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("PlistOfQuestion.plist");
-  
-    //問題文作成
-    makeQuestionText();
-    //選択肢作成
-    makeChoiceText();
+    
+    //スタートの説明画像をのっける
+    auto startImage = Sprite::create("startImage.jpg");
+    startImage->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
+    startImage->setName("start");
+    this->addChild(startImage);
+    
+    
+    
 
     return true;
 }
@@ -117,7 +121,17 @@ bool GameScene::init()
 //タッチ開始イベント
 bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
 {
+
+    if(this->getChildByName("start") != nullptr){
+        
+        //問題文作成
+        makeQuestionText();
+        //選択肢作成
+        makeChoiceText();
+        
+    }
     
+
     
     
     
@@ -210,6 +224,7 @@ void GameScene::makeQuestionText(){
     questionLabel->setName(question->english);
     
     this->addChild(questionLabel);
+    
     
     
 
