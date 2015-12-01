@@ -7,7 +7,7 @@
 			<key>question/bear.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,555},{195,277}}</string>
+				<string>{{2269,0},{195,277}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -18,11 +18,11 @@
 			<key>question/cat.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1163,492},{181,263}}</string>
+				<string>{{2523,195},{181,263}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{181,263}</string>
 			</dict>
@@ -40,7 +40,7 @@
 			<key>question/dog.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{908,698},{271,137}}</string>
+				<string>{{2259,386},{271,137}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -62,7 +62,7 @@
 			<key>question/giraffe.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{321,546},{210,260}}</string>
+				<string>{{2009,0},{210,260}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -73,7 +73,7 @@
 			<key>question/gorilla.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{908,492},{206,255}}</string>
+				<string>{{2823,0},{206,255}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -84,7 +84,7 @@
 			<key>question/hippopotamus.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1043,287},{309,205}}</string>
+				<string>{{321,546},{309,205}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -117,7 +117,7 @@
 			<key>question/monkey.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{651,468},{238,257}}</string>
+				<string>{{0,555},{238,257}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -139,7 +139,7 @@
 			<key>question/panda.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,750},{195,277}}</string>
+				<string>{{2546,0},{195,277}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -161,7 +161,7 @@
 			<key>question/rabbit.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1682,455},{231,284}}</string>
+				<string>{{651,468},{231,284}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -183,7 +183,7 @@
 			<key>question/tiger.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1682,260},{354,195}}</string>
+				<string>{{1043,287},{354,195}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -224,6 +224,226 @@
 				<key>sourceSize</key>
 				<string>{350,295}</string>
 			</dict>
+			<key>question/eight.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1873,554},{147,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{147,191}</string>
+			</dict>
+			<key>question/eighteen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{3078,0},{243,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{243,191}</string>
+			</dict>
+			<key>question/eleven.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2523,376},{195,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{195,191}</string>
+			</dict>
+			<key>question/fifteen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2786,206},{231,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{231,191}</string>
+			</dict>
+			<key>question/five.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1336,634},{134,190}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{134,190}</string>
+			</dict>
+			<key>question/four.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1930,401},{153,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{153,191}</string>
+			</dict>
+			<key>question/fourteen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2269,195},{254,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{254,191}</string>
+			</dict>
+			<key>question/nine.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1336,493},{141,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{141,191}</string>
+			</dict>
+			<key>question/nineteen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{3805,0},{237,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{237,191}</string>
+			</dict>
+			<key>question/one.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{935,468},{93,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{93,191}</string>
+			</dict>
+			<key>question/seven.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2064,589},{146,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{146,191}</string>
+			</dict>
+			<key>question/seventeen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{3321,0},{242,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{242,191}</string>
+			</dict>
+			<key>question/six.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1527,493},{141,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{141,191}</string>
+			</dict>
+			<key>question/sixteen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{3078,191},{237,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{237,191}</string>
+			</dict>
+			<key>question/ten.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2009,210},{250,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{250,191}</string>
+			</dict>
+			<key>question/thirteen.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{3563,0},{242,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{242,191}</string>
+			</dict>
+			<key>question/three.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2121,401},{136,188}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,188}</string>
+			</dict>
+			<key>question/twelve.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1682,260},{248,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{248,191}</string>
+			</dict>
+			<key>question/twenty.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1028,482},{308,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{308,191}</string>
+			</dict>
+			<key>question/two.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1682,451},{152,191}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{152,191}</string>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>
@@ -234,12 +454,12 @@
 			<key>realTextureFileName</key>
 			<string>PlistOfQuestion.png</string>
 			<key>size</key>
-			<string>{2048,1024}</string>
+			<string>{4096,1024}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>2048</integer>
+			<integer>4096</integer>
 			<key>height</key>
 			<integer>1024</integer>
 		</dict>

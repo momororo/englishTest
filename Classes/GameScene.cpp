@@ -104,7 +104,16 @@ bool GameScene::init()
     
     
     //出題リストの作成(questions)のコピー
-    ListOfQuestions = questions;
+    ListOfQuestions =  SaveSQL::sqliteGetValueForKey("number");
+    
+    if(ListOfQuestions ->size() == 0){
+        log("取得しっぱい");
+        return true;
+    }
+    
+    for(int idx = 0 ; idx < ListOfQuestions->size() ; idx++){
+        log("%s",ListOfQuestions->at(idx)->english.c_str());
+    }
     
     
   

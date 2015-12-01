@@ -22,7 +22,27 @@
       <FilePathData Path="question/whale.png" />
       <FilePathData Path="question/wolf.png" />
       <FilePathData Path="question/zebra.png" />
+      <FilePathData Path="question/eight.png" />
+      <FilePathData Path="question/eighteen.png" />
+      <FilePathData Path="question/eleven.png" />
+      <FilePathData Path="question/fifteen.png" />
+      <FilePathData Path="question/five.png" />
+      <FilePathData Path="question/four.png" />
+      <FilePathData Path="question/fourteen.png" />
+      <FilePathData Path="question/nine.png" />
+      <FilePathData Path="question/nineteen.png" />
+      <FilePathData Path="question/one.png" />
+      <FilePathData Path="question/seven.png" />
+      <FilePathData Path="question/seventeen.png" />
+      <FilePathData Path="question/six.png" />
+      <FilePathData Path="question/sixteen.png" />
+      <FilePathData Path="question/ten.png" />
+      <FilePathData Path="question/thirteen.png" />
+      <FilePathData Path="question/three.png" />
+      <FilePathData Path="question/twelve.png" />
+      <FilePathData Path="question/twenty.png" />
+      <FilePathData Path="question/two.png" />
     </ImageFiles>
-    <MaxSize Width="1024" Height="1024" />
+    <MaxSize Width="4096" Height="4096" />
   </Content>
 </PlistInfoProjectFile>
