@@ -190,6 +190,7 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
 
                     }else{
                         
+                        
                         //次の問題文の作成
                         makeQuestionText();
                         makeChoiceText();
@@ -208,6 +209,51 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                 
                 //不正解の処理
                 log("不正解");
+                
+                //ループで正解以外の選択肢を黒色に染める
+                for(int idxidx = 0; idxidx < choices->size(); idxidx++){
+                    
+                    if(idxidx != idx){
+                        choices->at(idxidx)->setColor(Color3B::BLACK);
+                    }
+                    
+                    auto action1 = FadeOut::create(1);
+                    
+                    CallFunc *callFunc1 = CallFunc::create([&](){});
+                    
+                    if(idxidx == 3){
+                        
+                        //フェードアウト後
+                        callFunc1 = CallFunc::create([&](){
+                            
+                                
+                            if(questionCount == 10){
+                                
+                                log("10問終了");
+                                //クイズの終了
+                                makeEnd();
+                                
+                            }else{
+                                
+                                //次の問題文の作成
+                                makeQuestionText();
+                                makeChoiceText();
+                                
+                            }
+
+                            
+                        });
+                    }
+
+                    
+                    //シークエンス作成
+                    auto seq = Sequence::create(action1, callFunc1, NULL);
+                    
+                    choices->at(idxidx)->runAction(seq);
+
+                    
+                    
+                }
                 
             }
             
