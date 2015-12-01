@@ -287,10 +287,10 @@ void GameScene::makeChoiceText(){
         Vec2 pos;
         //回数に合わせて置く場所を決定する
         switch (count) {
-            case 0:pos = Vec2(100, 100);break;
-            case 1:pos = Vec2(300, 300);break;
-            case 2:pos = Vec2(500, 500);break;
-            case 3:pos = Vec2(700, 700);break;
+            case 0:pos = Vec2(200, 150);break;
+            case 1:pos = Vec2(936, 150);break;
+            case 2:pos = Vec2(936, 470);break;
+            case 3:pos = Vec2(200, 470);break;
             default:break;
         }
         
@@ -328,5 +328,52 @@ void GameScene::makeEnd(){
     }
     //配列のお掃除
     choices->clear();
+    
+    //スコアボードの追加
+    Sprite *scoreBoard = Sprite::create("scoreBoard.png");
+    scoreBoard -> setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
+    this-> addChild(scoreBoard);
+    
+    //やりなおしボタン作成
+    auto retryBt = Sprite::create("retryBt.png");
+    
+    auto retryBtTaped = Sprite::create("retryBt.png");
+    retryBtTaped -> setOpacity(150);
+    
+    //メニューアイテムの作成
+    auto retryBtnItem = MenuItemSprite::create(retryBt, retryBtTaped, [](Ref *ref){
 
+        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, GameScene::createScene(), 0));
+        
+    });
+    
+    //メニューの作成　pMenuの中にpBtnItemを入れる
+    auto retryMenu = Menu::create(retryBtnItem, NULL);
+    
+    //pMenuを画面中央に配置
+    retryMenu->setPosition(Vec2(300, 30));
+    retryMenu->setName("retry");
+    scoreBoard -> addChild(retryMenu);
+    
+    //もどるボタン作成
+    auto exitBt = Sprite::create("exitBt.png");
+    
+    auto exitBtTaped = Sprite::create("exitBt.png");
+    exitBtTaped -> setOpacity(150);
+    
+    //メニューアイテムの作成
+    auto exitBtnItem = MenuItemSprite::create(exitBt, exitBtTaped, [](Ref *ref){
+        
+        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, GameScene::createScene(), 0));
+        
+    });
+    
+    //メニューの作成　pMenuの中にpBtnItemを入れる
+    auto exitMenu = Menu::create(exitBtnItem, NULL);
+    
+    //pMenuを画面中央に配置
+    exitMenu->setPosition(Vec2(700, 30));
+    exitMenu->setName("exit");
+    scoreBoard -> addChild(exitMenu);
+    
 }
