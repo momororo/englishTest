@@ -227,10 +227,10 @@ void GameScene::makeChoiceText(){
         Vec2 pos;
         //回数に合わせて置く場所を決定する
         switch (count) {
-            case 0:pos = Vec2(300, 100);break;
-            case 1:pos = Vec2(300, 200);break;
-            case 2:pos = Vec2(300, 300);break;
-            case 3:pos = Vec2(300, 400);break;
+            case 0:pos = Vec2(200, 150);break;
+            case 1:pos = Vec2(936, 150);break;
+            case 2:pos = Vec2(936, 470);break;
+            case 3:pos = Vec2(200, 470);break;
             default:break;
         }
         
