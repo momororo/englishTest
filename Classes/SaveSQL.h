@@ -29,7 +29,7 @@ public:
     static void sqliteSetValue();
   
     //sql select(keyによって振る舞いを変える予定)
-    static cocos2d::Vector<Question*>*sqliteGetValueForKey(const char *key);
+    static cocos2d::Vector<Question*>*sqliteGetValueForKey(const char *key, int limit);
       
     //sql update
     static void sqliteUpdateValueForKey(const char *key,const char *value);
