@@ -290,7 +290,7 @@ void GameScene::makeQuestionText(){
     ListOfQuestions->eraseObject(question);
     
     //問題を表示する(ここを画像に変えればよし)
-    questionLabel = Label::createWithSystemFont(question->english,defaultFont,30);
+    questionLabel = Label::createWithSystemFont(question->english,defaultFont,100);
     questionLabel->setPosition(selfFrame.width/2,selfFrame.height/2);
     questionLabel->setTextColor(Color4B::BLACK);
     
@@ -425,7 +425,7 @@ void GameScene::makeEnd(){
     auto retryMenu = Menu::create(retryBtnItem, NULL);
     
     //pMenuを画面中央に配置
-    retryMenu->setPosition(Vec2(300, 30));
+    retryMenu->setPosition(Vec2(180, 60));
     retryMenu->setName("retry");
     scoreBoard -> addChild(retryMenu);
     
@@ -438,7 +438,7 @@ void GameScene::makeEnd(){
     //メニューアイテムの作成
     auto exitBtnItem = MenuItemSprite::create(exitBt, exitBtTaped, [](Ref *ref){
         
-        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, GameScene::createScene(), 0));
+        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, TitleScene::createScene(), 0));
         
     });
     
@@ -446,8 +446,15 @@ void GameScene::makeEnd(){
     auto exitMenu = Menu::create(exitBtnItem, NULL);
     
     //pMenuを画面中央に配置
-    exitMenu->setPosition(Vec2(700, 30));
+    exitMenu->setPosition(Vec2(480, 60));
     exitMenu->setName("exit");
     scoreBoard -> addChild(exitMenu);
+    
+    //点数表示
+    std::string scoreStr = StringUtils::format("%d",correctCount);
+    Label *scoreLabel = Label::createWithSystemFont(scoreStr, funwariFont, 220);
+    scoreLabel -> setPosition(Vec2(180,220));
+    scoreLabel -> setColor(Color3B(255,85,85));
+    scoreBoard -> addChild(scoreLabel);
     
 }

@@ -60,6 +60,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>KodomoRounded.otf</string>
+		<string>funwari-round.otf</string>
 	</array>
 	<key>UILaunchImages</key>
 	<array>

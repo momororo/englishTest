@@ -18,6 +18,7 @@
 
 //フォント
 #define defaultFont "KodomoRounded"
+#define funwariFont "funwariround"
 //背景
 #define defaultBk "bk.png"
 
