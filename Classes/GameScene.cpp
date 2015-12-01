@@ -248,9 +248,9 @@ void GameScene::makeChoiceText(){
         //既存の選択肢と被っていれば再抽選のフラグへ
         for(int idx = 0 ; idx < count ; idx++){
 
-            if(choice->english == choices->at(choices->size()-1)->getName()){
+            if(choice->english == choices->at(idx)->getName()){
                 continueFlag = true;
-                continue;
+                break;
             }
             
         }
