@@ -362,5 +362,11 @@ void GameScene::makeEnd(){
     exitMenu->setName("exit");
     scoreBoard -> addChild(exitMenu);
     
+    std::string scoreStr = StringUtils::format("%d",correctCount);
+    
+    Label *scoreLabel = Label::createWithSystemFont(scoreStr, defaultFont, 220);
+    scoreLabel -> setPosition(Vec2(180,220));
+    scoreLabel -> setColor(Color3B::BLACK);
+    scoreBoard -> addChild(scoreLabel);
     
 }
