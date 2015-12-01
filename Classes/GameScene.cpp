@@ -124,6 +124,8 @@ bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
 
     if(this->getChildByName("start") != nullptr){
         
+        this->getChildByName("start")->removeFromParentAndCleanup(true);
+        
         //問題文作成
         makeQuestionText();
         //選択肢作成

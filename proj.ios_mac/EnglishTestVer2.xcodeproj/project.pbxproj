@@ -360,6 +360,11 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A408ECFE1C0DCFE700DB238E /* scoreBoard.png */,
+				A408ECFC1C0DCFE000DB238E /* exitBt.png */,
+				A408ECFA1C0DCFCF00DB238E /* retryBt.png */,
+				A408ECF41C0DB98B00DB238E /* bk_1.png */,
+				A408ECF61C0DB9C900DB238E /* bk_2.png */,
 				A46F074D1C04A027004E0D2D /* bk_1.png */,
 				A46F074E1C04A027004E0D2D /* bk_2.png */,
 				04173DB91C0DDC6C0041136A /* startImage.jpg */,
