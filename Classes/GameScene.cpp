@@ -362,8 +362,8 @@ void GameScene::makeEnd(){
     exitMenu->setName("exit");
     scoreBoard -> addChild(exitMenu);
     
+    //点数表示
     std::string scoreStr = StringUtils::format("%d",correctCount);
-    
     Label *scoreLabel = Label::createWithSystemFont(scoreStr, defaultFont, 220);
     scoreLabel -> setPosition(Vec2(180,220));
     scoreLabel -> setColor(Color3B::BLACK);
