@@ -73,6 +73,8 @@
 		A408ECFB1C0DCFCF00DB238E /* retryBt.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ECFA1C0DCFCF00DB238E /* retryBt.png */; };
 		A408ECFD1C0DCFE000DB238E /* exitBt.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ECFC1C0DCFE000DB238E /* exitBt.png */; };
 		A408ECFF1C0DCFE700DB238E /* scoreBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ECFE1C0DCFE700DB238E /* scoreBoard.png */; };
+		A408ED071C0DE23600DB238E /* funwari-round.otf in Resources */ = {isa = PBXBuildFile; fileRef = A408ED051C0DE23600DB238E /* funwari-round.otf */; };
+		A408ED081C0DE23600DB238E /* KodomoRounded.otf in Resources */ = {isa = PBXBuildFile; fileRef = A408ED061C0DE23600DB238E /* KodomoRounded.otf */; };
 		A44FC0751BC3971A00AEE934 /* GameScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0711BC3971A00AEE934 /* GameScene */; };
 		A44FC0761BC3971A00AEE934 /* GameScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0721BC3971A00AEE934 /* GameScene.csb */; };
 		A44FC0771BC3971A00AEE934 /* titleScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0731BC3971A00AEE934 /* titleScene */; };
@@ -211,6 +213,8 @@
 		A408ECFA1C0DCFCF00DB238E /* retryBt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryBt.png; sourceTree = "<group>"; };
 		A408ECFC1C0DCFE000DB238E /* exitBt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exitBt.png; sourceTree = "<group>"; };
 		A408ECFE1C0DCFE700DB238E /* scoreBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreBoard.png; sourceTree = "<group>"; };
+		A408ED051C0DE23600DB238E /* funwari-round.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "funwari-round.otf"; sourceTree = "<group>"; };
+		A408ED061C0DE23600DB238E /* KodomoRounded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KodomoRounded.otf; sourceTree = "<group>"; };
 		A44FC0711BC3971A00AEE934 /* GameScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameScene; sourceTree = "<group>"; };
 		A44FC0721BC3971A00AEE934 /* GameScene.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameScene.csb; sourceTree = "<group>"; };
 		A44FC0731BC3971A00AEE934 /* titleScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = titleScene; sourceTree = "<group>"; };
@@ -360,13 +364,13 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A408ED051C0DE23600DB238E /* funwari-round.otf */,
+				A408ED061C0DE23600DB238E /* KodomoRounded.otf */,
 				A408ECFE1C0DCFE700DB238E /* scoreBoard.png */,
 				A408ECFC1C0DCFE000DB238E /* exitBt.png */,
 				A408ECFA1C0DCFCF00DB238E /* retryBt.png */,
 				A408ECF41C0DB98B00DB238E /* bk_1.png */,
 				A408ECF61C0DB9C900DB238E /* bk_2.png */,
-				A46F074D1C04A027004E0D2D /* bk_1.png */,
-				A46F074E1C04A027004E0D2D /* bk_2.png */,
 				04173DB91C0DDC6C0041136A /* startImage.jpg */,
 				A46F074F1C04A027004E0D2D /* bk_3.png */,
 				A44FC0AA1BCF8D0700AEE934 /* stageSelect.mp3 */,
@@ -587,6 +591,7 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				A408ED071C0DE23600DB238E /* funwari-round.otf in Resources */,
 				A408ECF71C0DB9C900DB238E /* bk_2.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				A44FC0A61BCE341700AEE934 /* BanzaiSkeletal.csb in Resources */,
@@ -611,6 +616,7 @@
 				A44FC07F1BC6469A00AEE934 /* piyo_1.png in Resources */,
 				045C0BFC1BBD0DEA001C3A47 /* question.csv in Resources */,
 				A44FC0751BC3971A00AEE934 /* GameScene in Resources */,
+				A408ED081C0DE23600DB238E /* KodomoRounded.otf in Resources */,
 				A44FC0AB1BCF8D0700AEE934 /* stageSelect.mp3 in Resources */,
 				A408ECFD1C0DCFE000DB238E /* exitBt.png in Resources */,
 				A44FC0781BC3971A00AEE934 /* TitleScene.csb in Resources */,

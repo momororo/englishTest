@@ -380,9 +380,9 @@ void GameScene::makeEnd(){
     
     //点数表示
     std::string scoreStr = StringUtils::format("%d",correctCount);
-    Label *scoreLabel = Label::createWithSystemFont(scoreStr, defaultFont, 220);
+    Label *scoreLabel = Label::createWithSystemFont(scoreStr, funwariFont, 220);
     scoreLabel -> setPosition(Vec2(180,220));
-    scoreLabel -> setColor(Color3B::BLACK);
+    scoreLabel -> setColor(Color3B(255,85,85));
     scoreBoard -> addChild(scoreLabel);
     
 }
