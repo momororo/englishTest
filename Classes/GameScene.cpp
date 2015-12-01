@@ -122,6 +122,8 @@ bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
     makeChoiceText();
     
     
+    
+    
     return true;
 }
 
@@ -131,6 +133,40 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
 
     //touchPoint : タッチポイントを取得
     Point touchPoint = Vec2(pTouch->getLocation());
+    
+    //タッチ判定
+    for(int idx = 0;idx < choices->size();idx++){
+        
+        if(choices->at(idx)->getBoundingBox().containsPoint(touchPoint)){
+            
+            //正解か判定
+            if(choices->at(idx)->getName() == questionLabel->getName()){
+                
+                //正解の処理
+                log("正解");
+                correctCount++;
+                
+            }else{
+                
+                //不正解の処理
+                log("不正解");
+                
+            }
+            
+            //問題カウントアップ
+            questionCount++;
+            
+            //次の問題文の作成
+            makeQuestionText();
+            makeChoiceText();
+            
+
+            //終了
+            return;
+            
+        }
+        
+    }
 
 }
 
@@ -178,8 +214,6 @@ void GameScene::makeChoiceText(){
         this->removeChildByTag(200);
     }
     
-    //選択肢の配列作っちゃう
-    Vector<Sprite*> *choices = new Vector<Sprite*>;
     
     //答えを置く場所を決める
     int answerPoint = arc4random_uniform(4);
