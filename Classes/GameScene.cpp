@@ -218,7 +218,7 @@ void GameScene::makeQuestionText(){
     ListOfQuestions->eraseObject(question);
     
     //問題を表示する(ここを画像に変えればよし)
-    questionLabel = Label::createWithSystemFont(question->english,defaultFont,30);
+    questionLabel = Label::createWithSystemFont(question->english,defaultFont,100);
     questionLabel->setPosition(selfFrame.width/2,selfFrame.height/2);
     questionLabel->setTextColor(Color4B::BLACK);
     
