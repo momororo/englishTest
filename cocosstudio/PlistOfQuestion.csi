@@ -1,0 +1,28 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="PlistOfQuestion" Type="Plist" ID="9f1a3da0-8bae-489c-a832-bf6a97dc9d29" Version="2.3.3.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="question/bear.png" />
+      <FilePathData Path="question/cat.png" />
+      <FilePathData Path="question/cow.png" />
+      <FilePathData Path="question/dog.png" />
+      <FilePathData Path="question/elephant.png" />
+      <FilePathData Path="question/giraffe.png" />
+      <FilePathData Path="question/gorilla.png" />
+      <FilePathData Path="question/hippopotamus.png" />
+      <FilePathData Path="question/horse.png" />
+      <FilePathData Path="question/lion.png" />
+      <FilePathData Path="question/monkey.png" />
+      <FilePathData Path="question/mouse.png" />
+      <FilePathData Path="question/panda.png" />
+      <FilePathData Path="question/pig.png" />
+      <FilePathData Path="question/rabbit.png" />
+      <FilePathData Path="question/sheep.png" />
+      <FilePathData Path="question/tiger.png" />
+      <FilePathData Path="question/whale.png" />
+      <FilePathData Path="question/wolf.png" />
+      <FilePathData Path="question/zebra.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

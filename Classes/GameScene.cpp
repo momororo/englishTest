@@ -60,17 +60,32 @@ bool GameScene::init()
     this->scheduleUpdate();
     
 //背景の生成
-    //下地
-    Sprite *bkWhite = Sprite::create();//下地
-    bkWhite->setTextureRect(Rect(0,0,640,1136));
-    bkWhite->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
-    bkWhite->setColor(Color3B::WHITE);//ノート
-    this->addChild(bkWhite);
+    //titleSceneで設定したステージ数を、getIntegerforkeyで取り出し、背景を設定する
+    auto stage = UserDefault::getInstance();
+    //背景のファイルネームをUserDefaultから取得
+    std::string  bkFileName;
+    switch (stage ->getIntegerForKey("selectStage")) {
+        case 1:
+            //ステージ１のゲーム背景
+            bkFileName = "bk_1.png";
+            break;
+        case 2:
+            //ステージ2のゲーム背景
+            bkFileName = "bk_2.png";
+            break;
+        case 3:
+            //ステージ3のゲーム背景
+            bkFileName = "bk_3.png";
+            break;
+            
+        default:
+            break;
+    }
+    
     //背景部
-    Sprite *bk = Sprite::create(defaultBk);
+    Sprite *bk = Sprite::create(bkFileName);
     bk->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
     bk->setName("bk");
-    
     this->addChild(bk);
 
     
@@ -86,7 +101,6 @@ bool GameScene::init()
     makeQuestionText();
     //選択肢作成
     makeChoiceText();
-    
 
     return true;
 }
@@ -109,7 +123,6 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
 
     //touchPoint : タッチポイントを取得
     Point touchPoint = Vec2(pTouch->getLocation());
-
 
 }
 

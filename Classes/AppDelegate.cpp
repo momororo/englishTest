@@ -2,6 +2,8 @@
 #include "TitleScene.h"
 #include "GameScene.h"
 #include "SaveSQL.h"
+#include "TopScene.h"
+#include "GameScene.h"
 
 USING_NS_CC;
 
@@ -54,8 +56,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
+    //auto scene = TitleScene::createScene();
+    //auto scene = TopScene::createScene();
     auto scene = GameScene::createScene();
-    
+
 
     //初回のみデータ読込
     if(!UserDefault::getInstance()->getBoolForKey("firstFlag")){

@@ -1,5 +1,5 @@
 <PlistInfoProjectFile>
-  <PropertyGroup Type="Plist" Name="PlistOfBanzai" ID="2d908012-1440-43e3-a0be-8d9da2ad5b67" Version="2.3.2.3" />
+  <PropertyGroup Name="PlistOfBanzai" Type="Plist" ID="2d908012-1440-43e3-a0be-8d9da2ad5b67" Version="2.3.3.0" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
       <FilePathData Path="banzai/body_happy.png" />
