@@ -62,20 +62,29 @@ bool GameScene::init()
 //背景の生成
     //titleSceneで設定したステージ数を、getIntegerforkeyで取り出し、背景を設定する
     auto stage = UserDefault::getInstance();
+    
+    //デバグ
+    stage->setIntegerForKey("selectStage", 1);
+    
     //背景のファイルネームをUserDefaultから取得
     std::string  bkFileName;
+    std::string  dbSelectName;
+
     switch (stage ->getIntegerForKey("selectStage")) {
         case 1:
             //ステージ１のゲーム背景
             bkFileName = "bk_1.png";
+            dbSelectName = "number";
             break;
         case 2:
             //ステージ2のゲーム背景
             bkFileName = "bk_2.png";
+            dbSelectName = "food";
             break;
         case 3:
             //ステージ3のゲーム背景
             bkFileName = "bk_3.png";
+            dbSelectName = "animal";
             break;
             
         default:
@@ -88,14 +97,13 @@ bool GameScene::init()
     bk->setName("bk");
     this->addChild(bk);
 
-    
-    
     //出題リストの抜き出し 10問なので10
-    ListOfQuestions = SaveSQL::sqliteGetValueForKey("number", 10);
-    
+    ListOfQuestions = SaveSQL::sqliteGetValueForKey(dbSelectName.c_str(), 10);
     //問題文の抜き出し 全部抜き出したいから適当に50
-    questions =  SaveSQL::sqliteGetValueForKey("number",50);
+    questions =  SaveSQL::sqliteGetValueForKey(dbSelectName.c_str(),50);
     
+    //画像のリストを読込
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("PlistOfQuestion.plist");
   
     //問題文作成
     makeQuestionText();
@@ -146,7 +154,6 @@ void GameScene::makeQuestionText(){
     //リストから選ばれた問題を除外する。
     ListOfQuestions->eraseObject(question);
     
-    
     //問題を表示する(ここを画像に変えればよし)
     questionLabel = Label::createWithSystemFont(question->english,defaultFont,30);
     questionLabel->setPosition(selfFrame.width/2,selfFrame.height/2);
@@ -172,10 +179,7 @@ void GameScene::makeChoiceText(){
     }
     
     //選択肢の配列作っちゃう
-//    Vector<Sprite*> *choices = new Vector<Sprite*>;
-    Vector<Label*> *choices = new Vector<Label*>;
-
-    
+    Vector<Sprite*> *choices = new Vector<Sprite*>;
     
     //答えを置く場所を決める
     int answerPoint = arc4random_uniform(4);
@@ -209,19 +213,15 @@ void GameScene::makeChoiceText(){
         if(continueFlag == true){continue;}
         
         //スプライトを作成して設置
-//        Sprite* sp = Sprite::create(choice->english);
-        Label* sp = Label::createWithSystemFont(choice->english,defaultFont,30);
-
+        Sprite* sp = Sprite::createWithSpriteFrameName(StringUtils::format("question/%s.png",
+                                                                           choice->english.c_str()));
         sp->setName(choice->english);
         
         //答えを置く回はスプライトを置き換え
         if(count == answerPoint){
-//            sp = Sprite::create(questionLabel->getName());
-            sp = Label::createWithSystemFont(questionLabel->getName(),defaultFont,30);
+            sp = Sprite::createWithSpriteFrameName(StringUtils::format("question/%s.png",questionLabel->getName().c_str()));
             sp->setName(questionLabel->getName());
         }
-        
-        sp->setTextColor(Color4B::BLACK);
         
         Vec2 pos;
         //回数に合わせて置く場所を決定する

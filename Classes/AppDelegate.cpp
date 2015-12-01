@@ -58,7 +58,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
     //auto scene = TitleScene::createScene();
     //auto scene = TopScene::createScene();
-    auto scene = GameScene::createScene();
 
 
     //初回のみデータ読込
@@ -72,6 +71,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
         UserDefault::getInstance()->setBoolForKey("firstFlag", true);
         
     }
+    
+    auto scene = GameScene::createScene();
+
 
 
     // run
