@@ -126,6 +126,7 @@ bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
         
         this->getChildByName("start")->removeFromParentAndCleanup(true);
         
+        
         //問題文作成
         makeQuestionText();
         //選択肢作成
@@ -143,6 +144,9 @@ bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
 //タッチ終了イベント
 void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
 {
+    if(this->getChildByName("correct")){
+        return;
+    }
 
     //touchPoint : タッチポイントを取得
     Point touchPoint = Vec2(pTouch->getLocation());
@@ -157,12 +161,48 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
             log("%s",choices->at(idx)->getName().c_str());
             log("%s",questionLabel->getName().c_str());
             
+            //問題カウントアップ
+            questionCount++;
+            
             //正解か判定
             if(choices->at(idx)->getName() == questionLabel->getName()){
                 
                 //正解の処理
                 log("正解");
                 correctCount++;
+                
+                auto correct = Sprite::create("correct.png");
+                auto pos = choices->at(idx)->getPosition();
+                correct->setPosition(pos);
+                this->addChild(correct);
+                
+                
+                //フェードアウト
+                auto action1 = FadeOut::create(1);
+                //フェードアウト後
+                auto callFunc1 = CallFunc::create([&](){
+                    
+                    if(questionCount == 10){
+                        
+                        log("10問終了");
+                        //クイズの終了
+                        makeEnd();
+
+                    }else{
+                        
+                        //次の問題文の作成
+                        makeQuestionText();
+                        makeChoiceText();
+                        
+                    }
+                    
+                });
+                
+                //シークエンス作成
+                auto seq = Sequence::create(action1, callFunc1, NULL);
+                
+                correct->runAction(seq);
+                
                 
             }else{
                 
@@ -171,23 +211,9 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                 
             }
             
-            //問題カウントアップ
-            questionCount++;
             
-            //10題解いたら終了
-            if(questionCount == 10){
-                log("10問終了");
-                makeEnd();
-                return;
-            }
-            
-            //次の問題文の作成
-            makeQuestionText();
-            makeChoiceText();
             
 
-            //終了
-            return;
             
         }
         
