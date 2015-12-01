@@ -104,6 +104,7 @@ bool GameScene::init()
     
     //画像のリストを読込
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("PlistOfQuestion.plist");
+    
   
     //問題文作成
     makeQuestionText();

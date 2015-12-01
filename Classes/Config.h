@@ -17,7 +17,7 @@
 #define origin Director::getInstance()->getVisibleOrigin()
 
 //フォント
-#define defaultFont "Gyate-Luminescence.ttf"
+#define defaultFont "KodomoRounded"
 //背景
 #define defaultBk "bk.png"
 
