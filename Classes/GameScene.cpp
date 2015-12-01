@@ -118,9 +118,6 @@ bool GameScene::init()
 bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
 {
     
-    makeQuestionText();
-    makeChoiceText();
-    
     
     
     
@@ -139,6 +136,11 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
         
         if(choices->at(idx)->getBoundingBox().containsPoint(touchPoint)){
             
+            
+            
+            log("%s",choices->at(idx)->getName().c_str());
+            log("%s",questionLabel->getName().c_str());
+            
             //正解か判定
             if(choices->at(idx)->getName() == questionLabel->getName()){
                 
@@ -155,6 +157,13 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
             
             //問題カウントアップ
             questionCount++;
+            
+            //10題解いたら終了
+            if(questionCount == 10){
+                log("10問終了");
+                makeEnd();
+                return;
+            }
             
             //次の問題文の作成
             makeQuestionText();
@@ -180,8 +189,10 @@ void GameScene::onTouchCancelled(Touch *pTouch, Event *pEvent)
 void GameScene::makeQuestionText(){
     
     //問題文を削除
+    if(questionLabel != nullptr){
+        questionLabel->removeFromParentAndCleanup(true);
+    }
     
-    this->removeChildByTag(100);
     
     //リストから問題を選ぶ
     Question* question = ListOfQuestions->getRandomObject();
@@ -197,8 +208,6 @@ void GameScene::makeQuestionText(){
     
     //後で使うよ
     questionLabel->setName(question->english);
-    //後で使うよ
-    questionLabel->setTag(100);
     
     this->addChild(questionLabel);
     
@@ -210,9 +219,11 @@ void GameScene::makeQuestionText(){
 void GameScene::makeChoiceText(){
     
     //前回のお掃除
-    for(int idx = 0 ; idx < 4; idx++){
-        this->removeChildByTag(200);
+    for(int idx = 0 ; idx < choices->size(); idx++){
+        choices->at(idx)->removeFromParentAndCleanup(true);
     }
+    //配列のお掃除
+    choices->clear();
     
     
     //答えを置く場所を決める
@@ -261,10 +272,10 @@ void GameScene::makeChoiceText(){
         Vec2 pos;
         //回数に合わせて置く場所を決定する
         switch (count) {
-            case 0:pos = Vec2(300, 100);break;
-            case 1:pos = Vec2(300, 200);break;
-            case 2:pos = Vec2(300, 300);break;
-            case 3:pos = Vec2(300, 400);break;
+            case 0:pos = Vec2(100, 100);break;
+            case 1:pos = Vec2(300, 300);break;
+            case 2:pos = Vec2(500, 500);break;
+            case 3:pos = Vec2(700, 700);break;
             default:break;
         }
         
@@ -272,8 +283,6 @@ void GameScene::makeChoiceText(){
         
         //addchild
         this->addChild(sp);
-        //削除用
-        sp->setTag(200);
         
         //count足し込み
         count++;
@@ -289,5 +298,20 @@ void GameScene::makeChoiceText(){
 
 //正解時の処理
 void GameScene::makeAnswer(){
+
+}
+void GameScene::makeEnd(){
+    
+    //お掃除
+    if(questionLabel != nullptr){
+        questionLabel->removeFromParentAndCleanup(true);
+    }
+    
+    //お掃除
+    for(int idx = 0 ; idx < choices->size(); idx++){
+        choices->at(idx)->removeFromParentAndCleanup(true);
+    }
+    //配列のお掃除
+    choices->clear();
 
 }

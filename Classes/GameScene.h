@@ -68,6 +68,9 @@ public:
     void makeChoiceText();
     //解答作成処理
     void makeAnswer();
+    
+    //終了画面
+    void makeEnd();
 };
 
 
