@@ -212,9 +212,10 @@ void GameScene::makeChoiceText(){
         //再抽選
         if(continueFlag == true){continue;}
         
+        auto st = StringUtils::format("question/%s.png",choice->english.c_str());
+        
         //スプライトを作成して設置
-        Sprite* sp = Sprite::createWithSpriteFrameName(StringUtils::format("question/%s.png",
-                                                                           choice->english.c_str()));
+        Sprite* sp = Sprite::createWithSpriteFrameName(st);
         sp->setName(choice->english);
         
         //答えを置く回はスプライトを置き換え
