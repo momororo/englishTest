@@ -52,16 +52,25 @@ public:
     cocos2d::Vector<Question*> *ListOfQuestions = new cocos2d::Vector<Question*>;
     //選ばれた問題
     cocos2d::Label* questionLabel;
+    //選択肢の配列
+    cocos2d::Vector<cocos2d::Sprite*> *choices = new cocos2d::Vector<cocos2d::Sprite*>;
+
     
     
     //問題カウント
     int questionCount = 0;
+    //正解カウント
+    int correctCount = 0;
+    
     //問題文作成
     void makeQuestionText();
     //選択肢作成
     void makeChoiceText();
     //解答作成処理
     void makeAnswer();
+    
+    //終了画面
+    void makeEnd();
 };
 
 

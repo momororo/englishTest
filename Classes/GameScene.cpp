@@ -119,8 +119,7 @@ bool GameScene::init()
 bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
 {
     
-    makeQuestionText();
-    makeChoiceText();
+    
     
     
     return true;
@@ -132,6 +131,52 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
 
     //touchPoint : タッチポイントを取得
     Point touchPoint = Vec2(pTouch->getLocation());
+    
+    //タッチ判定
+    for(int idx = 0;idx < choices->size();idx++){
+        
+        if(choices->at(idx)->getBoundingBox().containsPoint(touchPoint)){
+            
+            
+            
+            log("%s",choices->at(idx)->getName().c_str());
+            log("%s",questionLabel->getName().c_str());
+            
+            //正解か判定
+            if(choices->at(idx)->getName() == questionLabel->getName()){
+                
+                //正解の処理
+                log("正解");
+                correctCount++;
+                
+            }else{
+                
+                //不正解の処理
+                log("不正解");
+                
+            }
+            
+            //問題カウントアップ
+            questionCount++;
+            
+            //10題解いたら終了
+            if(questionCount == 10){
+                log("10問終了");
+                makeEnd();
+                return;
+            }
+            
+            //次の問題文の作成
+            makeQuestionText();
+            makeChoiceText();
+            
+
+            //終了
+            return;
+            
+        }
+        
+    }
 
 }
 
@@ -145,8 +190,10 @@ void GameScene::onTouchCancelled(Touch *pTouch, Event *pEvent)
 void GameScene::makeQuestionText(){
     
     //問題文を削除
+    if(questionLabel != nullptr){
+        questionLabel->removeFromParentAndCleanup(true);
+    }
     
-    this->removeChildByTag(100);
     
     //リストから問題を選ぶ
     Question* question = ListOfQuestions->getRandomObject();
@@ -162,8 +209,6 @@ void GameScene::makeQuestionText(){
     
     //後で使うよ
     questionLabel->setName(question->english);
-    //後で使うよ
-    questionLabel->setTag(100);
     
     this->addChild(questionLabel);
     
@@ -175,12 +220,12 @@ void GameScene::makeQuestionText(){
 void GameScene::makeChoiceText(){
     
     //前回のお掃除
-    for(int idx = 0 ; idx < 4; idx++){
-        this->removeChildByTag(200);
+    for(int idx = 0 ; idx < choices->size(); idx++){
+        choices->at(idx)->removeFromParentAndCleanup(true);
     }
+    //配列のお掃除
+    choices->clear();
     
-    //選択肢の配列作っちゃう
-    Vector<Sprite*> *choices = new Vector<Sprite*>;
     
     //答えを置く場所を決める
     int answerPoint = arc4random_uniform(4);
@@ -204,9 +249,9 @@ void GameScene::makeChoiceText(){
         //既存の選択肢と被っていれば再抽選のフラグへ
         for(int idx = 0 ; idx < count ; idx++){
 
-            if(choice->english == choices->at(choices->size()-1)->getName()){
+            if(choice->english == choices->at(idx)->getName()){
                 continueFlag = true;
-                continue;
+                break;
             }
             
         }
@@ -239,8 +284,6 @@ void GameScene::makeChoiceText(){
         
         //addchild
         this->addChild(sp);
-        //削除用
-        sp->setTag(200);
         
         //count足し込み
         count++;
@@ -256,5 +299,20 @@ void GameScene::makeChoiceText(){
 
 //正解時の処理
 void GameScene::makeAnswer(){
+
+}
+void GameScene::makeEnd(){
+    
+    //お掃除
+    if(questionLabel != nullptr){
+        questionLabel->removeFromParentAndCleanup(true);
+    }
+    
+    //お掃除
+    for(int idx = 0 ; idx < choices->size(); idx++){
+        choices->at(idx)->removeFromParentAndCleanup(true);
+    }
+    //配列のお掃除
+    choices->clear();
 
 }
