@@ -114,6 +114,26 @@
           <Image Name="whale.png" />
           <Image Name="wolf.png" />
           <Image Name="zebra.png" />
+          <Image Name="eight.png" />
+          <Image Name="eighteen.png" />
+          <Image Name="eleven.png" />
+          <Image Name="fifteen.png" />
+          <Image Name="five.png" />
+          <Image Name="four.png" />
+          <Image Name="fourteen.png" />
+          <Image Name="nine.png" />
+          <Image Name="nineteen.png" />
+          <Image Name="one.png" />
+          <Image Name="seven.png" />
+          <Image Name="seventeen.png" />
+          <Image Name="six.png" />
+          <Image Name="sixteen.png" />
+          <Image Name="ten.png" />
+          <Image Name="thirteen.png" />
+          <Image Name="three.png" />
+          <Image Name="twelve.png" />
+          <Image Name="twenty.png" />
+          <Image Name="two.png" />
         </Folder>
       </RootFolder>
     </Group>
