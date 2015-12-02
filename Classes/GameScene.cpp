@@ -400,12 +400,13 @@ void GameScene::makeEnd(){
     //配列のお掃除
     choices->clear();
     
-    //スコアボードの追加
+    
+    //スコアボードの作成
     Sprite *scoreBoard = Sprite::create("scoreBoard.png");
     scoreBoard -> setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
     this-> addChild(scoreBoard);
     
-    //やりなおしボタン作成
+    //************* やりなおしボタン作成 ***************//
     auto retryBt = Sprite::create("retryBt.png");
     
     auto retryBtTaped = Sprite::create("retryBt.png");
@@ -426,7 +427,9 @@ void GameScene::makeEnd(){
     retryMenu->setName("retry");
     scoreBoard -> addChild(retryMenu);
     
-    //もどるボタン作成
+    //************* やりなおしボタン作成 (終) ***************//
+    
+    //************* もどるボタン作成 ********************//
     auto exitBt = Sprite::create("exitBt.png");
     
     auto exitBtTaped = Sprite::create("exitBt.png");
@@ -447,7 +450,9 @@ void GameScene::makeEnd(){
     exitMenu->setName("exit");
     scoreBoard -> addChild(exitMenu);
     
-    //点数表示
+    //************* もどるボタン作成 (終) ********************//
+    
+    //正解数表示
     std::string scoreStr = StringUtils::format("%d",correctCount);
     Label *scoreLabel = Label::createWithSystemFont(scoreStr, funwariFont, 220);
     scoreLabel -> setPosition(Vec2(180,220));

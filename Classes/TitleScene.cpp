@@ -12,6 +12,7 @@
 #include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
 #include "GameScene.h"
+#include "TopScene.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -82,6 +83,29 @@ bool TitleScene::init()
     this->addChild(piyo);
 
 /***********主人公の設定終****************/
+    
+//************* もどるボタン作成 ********************//
+    auto backBt = Sprite::create("back_top.png");
+    
+    auto backBtTaped = Sprite::create("back_top.png");
+    backBtTaped -> setOpacity(150);
+    
+    //メニューアイテムの作成
+    auto backBtnItem = MenuItemSprite::create(backBt, backBtTaped, [](Ref *ref){
+        
+        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, TopScene::createScene(), 0));
+        
+    });
+    
+    //メニューの作成　pMenuの中にpBtnItemを入れる
+    auto backMenu = Menu::create(backBtnItem, NULL);
+    
+    //pMenuを画面中央に配置
+    backMenu->setPosition(Vec2(backBt->getContentSize().width/2+10,selfFrame.height - backBt->getContentSize().height/2-10));
+    backMenu->setName("backBt");
+    this -> addChild(backMenu);
+    
+//************* もどるボタン作成 (終) ********************//
     
 
 
@@ -162,6 +186,9 @@ void TitleScene::makeMoveButton(){
             
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
+            
+//MARK:戻るボタンを消す
+            this -> getChildByName("backBt")->setVisible(false);
 
 
             
@@ -184,6 +211,9 @@ void TitleScene::makeMoveButton(){
                 //ボタンを押せるように
                 auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
                 button -> setTouchEnabled(true);
+                
+//MARK:戻るボタンを消す
+                this -> getChildByName("backBt")->setVisible(true);
 
 
                 
@@ -235,6 +265,9 @@ void TitleScene::makeMoveButton(){
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(selfFrame.width/2,0));
             
+//MARK:戻るボタンを消す
+            this -> getChildByName("backBt")->setVisible(false);
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
                 
@@ -253,7 +286,8 @@ void TitleScene::makeMoveButton(){
                 button -> setTouchEnabled(true);
 
                 
-                
+//MARK:戻るボタンを消す
+                this -> getChildByName("backBt")->setVisible(true);
                 
             });
             
@@ -302,6 +336,10 @@ void TitleScene::makeMoveButton(){
             auto bk = this ->getChildByName("mainScene")->getChildByName("background");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(selfFrame.width/2,0));
+            
+//MARK:戻るボタンを消す
+            this -> getChildByName("backBt")->setVisible(false);
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
                 
@@ -320,7 +358,8 @@ void TitleScene::makeMoveButton(){
                 button -> setTouchEnabled(true);
 
                 
-                
+//MARK:戻るボタンを消す
+                this -> getChildByName("backBt")->setVisible(true);
                 
             });
             
@@ -362,6 +401,11 @@ void TitleScene::makeMoveButton(){
             auto piyo = this ->getChildByName("walkPiyo");
             //画面移動
             auto action1 = MoveBy::create(4.0f,Point(-selfFrame.width/2,0));
+            
+//MARK:戻るボタンを消す
+            this -> getChildByName("backBt")->setVisible(false);
+            
+            
             //移動後の処理
             auto action2 = CallFuncN::create([&](Ref *sender){
                 
@@ -381,7 +425,8 @@ void TitleScene::makeMoveButton(){
                 auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_2"));
                 button -> setTouchEnabled(true);
 
-                
+//MARK:戻るボタンを消す
+                this -> getChildByName("backBt")->setVisible(true);
                 
                 
             });

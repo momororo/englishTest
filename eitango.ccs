@@ -23,6 +23,7 @@
             <Image Name="number_7.png" />
             <Image Name="number_8.png" />
             <Image Name="number_9.png" />
+            <Image Name="title_stage1.png" />
           </Folder>
           <Folder Name="stage2">
             <Image Name="giraffe.png" />
@@ -36,6 +37,7 @@
             <Image Name="penguin.png" />
             <Image Name="lake.png" />
             <Image Name="whale.png" />
+            <Image Name="title_stage2.png" />
           </Folder>
           <Folder Name="stage3">
             <Image Name="cake.png" />
@@ -45,6 +47,7 @@
             <Image Name="soup.png" />
             <Image Name="tea.png" />
             <Image Name="background_star.png" />
+            <Image Name="title_stage3.png" />
           </Folder>
           <Image Name="background.png" />
           <Image Name="blind.png" />
