@@ -63,9 +63,6 @@ bool GameScene::init()
     //titleSceneで設定したステージ数を、getIntegerforkeyで取り出し、背景を設定する
     auto stage = UserDefault::getInstance();
     
-    //デバグ
-    stage->setIntegerForKey("selectStage", 1);
-    
     //背景のファイルネームをUserDefaultから取得
     std::string  bkFileName;
     std::string  dbSelectName;
@@ -106,7 +103,7 @@ bool GameScene::init()
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("PlistOfQuestion.plist");
     
     //スタートの説明画像をのっける
-    auto startImage = Sprite::create("startImage.jpg");
+    auto startImage = Sprite::create("startImage.png");
     startImage->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
     startImage->setName("start");
     this->addChild(startImage);

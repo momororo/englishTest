@@ -72,7 +72,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         
     }
     
-    auto scene = GameScene::createScene();
+    auto scene = TopScene::createScene();
 
 
 
