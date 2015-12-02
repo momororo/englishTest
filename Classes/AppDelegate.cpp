@@ -76,7 +76,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     //デフォルト値の設定
-    UserDefault::getInstance()->setIntegerForKey("stageSelect", 1);
+    UserDefault::getInstance()->setIntegerForKey("selectStage", 1);
     
     auto scene = TopScene::createScene();
 

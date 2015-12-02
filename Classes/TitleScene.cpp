@@ -78,8 +78,11 @@ bool TitleScene::init()
     
     auto userDef = UserDefault::getInstance();
 
+    log("%d",userDef->getIntegerForKey("selectStage"));
+    
+    
     //場所を設定
-    piyo ->setPosition(mainScene->getChildByName("background")->getChildByName(StringUtils::format("Button_%d",userDef->getIntegerForKey("stageSelect")))->getPosition());
+    piyo ->setPosition(mainScene->getChildByName("background")->getChildByName(StringUtils::format("Button_%d",userDef->getIntegerForKey("selectStage")))->getPosition());
     
     this->addChild(piyo);
 
@@ -130,7 +133,7 @@ void TitleScene::makeStageButton(){
         auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName(StringUtils::format("Button_%d",idx)));
         
         //選択したステージ以外はボタンが動かないように
-        if(idx != UserDefault::getInstance()->getIntegerForKey("stageSelect")){
+        if(idx != UserDefault::getInstance()->getIntegerForKey("selectStage")){
             button -> setTouchEnabled(false);
         }
         

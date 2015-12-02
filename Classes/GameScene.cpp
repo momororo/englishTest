@@ -481,11 +481,11 @@ void GameScene::makeEnd(){
     if(correctCount == 10){
 
         auto userDef = UserDefault::getInstance();
-        auto clearCount = userDef->getIntegerForKey(StringUtils::format("clearCount%d",userDef->getIntegerForKey("stageSelect")).c_str());
+        auto clearCount = userDef->getIntegerForKey(StringUtils::format("clearCount%d",userDef->getIntegerForKey("selectStage")).c_str());
         
         clearCount++;
  
-        userDef->setIntegerForKey(StringUtils::format("clearCount%d",userDef->getIntegerForKey("stageSelect")).c_str(),clearCount);
+        userDef->setIntegerForKey(StringUtils::format("clearCount%d",userDef->getIntegerForKey("selectStage")).c_str(),clearCount);
  
     }
     
