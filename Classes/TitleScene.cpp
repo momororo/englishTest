@@ -77,8 +77,13 @@ bool TitleScene::init()
     auto piyo = Sprite::create("piyo_1.png");
     piyo -> setName("piyo");
     
+    auto userDef = UserDefault::getInstance();
+
+    log("%d",userDef->getIntegerForKey("selectStage"));
+    
+    
     //場所を設定
-    piyo ->setPosition(mainScene->getChildByName("background")->getChildByName("Button_1")->getPosition());
+    piyo ->setPosition(mainScene->getChildByName("background")->getChildByName(StringUtils::format("Button_%d",userDef->getIntegerForKey("selectStage")))->getPosition());
     
     this->addChild(piyo);
 
@@ -123,13 +128,36 @@ bool TitleScene::init()
 
 //ステージセレクトボタンの動作を設定
 void TitleScene::makeStageButton(){
+    
+    
+//ステージのクリア回数により解放するステージを選別する。
+    //2面の解放チェック
+    if(UserDefault::getInstance()->getIntegerForKey("clearCount1") >= 1){
+        
+        auto blind = dynamic_cast<Sprite*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName(StringUtils::format("blind_1")));
+        
+        blind->setVisible(false);
+        
+    }
+    
+    //3面の解放チェック
+    if(UserDefault::getInstance()->getIntegerForKey("clearCount2") >= 1){
+        
+        auto blind = dynamic_cast<Sprite*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName(StringUtils::format("blind_2")));
+        
+        blind->setVisible(false);
+    }
+
+    
+    
     //1面から3面
     for(int idx = 1 ; idx <= 3; idx++ ){
         
         
         auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName(StringUtils::format("Button_%d",idx)));
         
-        if(idx != 1){
+        //選択したステージ以外はボタンが動かないように
+        if(idx != UserDefault::getInstance()->getIntegerForKey("selectStage")){
             button -> setTouchEnabled(false);
         }
         
@@ -217,6 +245,8 @@ void TitleScene::makeMoveButton(){
 
 
                 
+                
+                
             });
             
             
@@ -227,6 +257,7 @@ void TitleScene::makeMoveButton(){
         }
         
     });
+    
 
 /*********goStage2終*************/
 
@@ -284,7 +315,6 @@ void TitleScene::makeMoveButton(){
                 //ボタンを押せるように
                 auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene") -> getChildByName("background")->getChildByName("Button_3"));
                 button -> setTouchEnabled(true);
-
                 
 //MARK:戻るボタンを消す
                 this -> getChildByName("backBt")->setVisible(true);
@@ -440,7 +470,9 @@ void TitleScene::makeMoveButton(){
     });
     
 /*********backStage2終*************/
-
+    
+    //クリア状態によってボタンの状態をかえる。
+    clearStageController();
     
     
 }
@@ -524,5 +556,29 @@ void TitleScene::stopPiyo(){
     this -> getChildByName("piyo") -> setVisible(true);
     
     this -> removeChildByName("walkPiyo");
+    
+}
+
+void TitleScene::clearStageController(){
+    
+    //ステージのクリア回数により解放するステージを選別する。
+    //2面の解放チェック
+    if(UserDefault::getInstance()->getIntegerForKey("clearCount1") == 0){
+        
+        auto goSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage2"));
+        
+        goSt2->setVisible(false);
+        goSt2->setEnabled(false);
+    }
+    
+    //3面の解放チェック
+    if(UserDefault::getInstance()->getIntegerForKey("clearCount2") == 0){
+        
+        auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
+        
+        goSt3->setVisible(false);
+        goSt3->setEnabled(false);
+    }
+
     
 }
