@@ -213,7 +213,7 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                 //ループで正解以外の選択肢を黒色に染める
                 for(int idxidx = 0; idxidx < choices->size(); idxidx++){
                     
-                    if(idxidx != idx){
+                    if(choices->at(idxidx)->getName() != questionLabel->getName()){
                         choices->at(idxidx)->setColor(Color3B::BLACK);
                     }
                     
