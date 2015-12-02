@@ -11,6 +11,7 @@
 #include "LoadScene.h"
 #include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
+#include "GameScene.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -118,6 +119,8 @@ void TitleScene::makeStageButton(){
                 UserDefault::getInstance()->setIntegerForKey("selectStage", idx);
                 
                 //ゲーム画面に遷移
+                Director::getInstance()->replaceScene(TransitionPageTurn::create(1, GameScene::createScene(), 0));
+
             }
             
         });
