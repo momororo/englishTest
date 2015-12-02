@@ -35,6 +35,9 @@ public:
     void walkPiyoToLeft();
     void stopPiyo();
     
+    //ステージ上のボタンをクリア状態によって表示非表示に切り替える
+    void clearStageController();
+    
 };
 
 #endif // __TITLE_SCENE_H__

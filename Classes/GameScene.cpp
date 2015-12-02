@@ -76,12 +76,12 @@ bool GameScene::init()
         case 2:
             //ステージ2のゲーム背景
             bkFileName = "bk_2.png";
-            dbSelectName = "food";
+            dbSelectName = "animal";
             break;
         case 3:
             //ステージ3のゲーム背景
             bkFileName = "bk_3.png";
-            dbSelectName = "animal";
+            dbSelectName = "food";
             break;
             
         default:
@@ -171,6 +171,7 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                 auto correct = Sprite::create("correct.png");
                 auto pos = choices->at(idx)->getPosition();
                 correct->setPosition(pos);
+                correct->setName("correct");
                 this->addChild(correct);
                 
                 
@@ -196,8 +197,10 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                     
                 });
                 
+                auto remove = RemoveSelf::create(true);
+                
                 //シークエンス作成
-                auto seq = Sequence::create(action1, callFunc1, NULL);
+                auto seq = Sequence::create(action1, callFunc1,remove, NULL);
                 
                 correct->runAction(seq);
                 
@@ -213,6 +216,7 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                     if(choices->at(idxidx)->getName() != questionLabel->getName()){
                         choices->at(idxidx)->setColor(Color3B::BLACK);
                     }
+                    
                     
                     auto action1 = FadeOut::create(1);
                     
@@ -247,6 +251,24 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                     auto seq = Sequence::create(action1, callFunc1, NULL);
                     
                     choices->at(idxidx)->runAction(seq);
+                    
+                    
+                    
+                    //不正解時もcorrectのSpriteを作り、操作不能の時間を作る。
+                    auto correct = Sprite::create();
+                    auto pos = choices->at(idx)->getPosition();
+                    correct->setPosition(pos);
+                    correct->setName("correct");
+                    correct->setVisible("false");
+                    this->addChild(correct);
+                    //フェードアウト
+                    auto correctAction = FadeOut::create(1);
+                    auto correctRemove = RemoveSelf::create(true);
+                    //シークエンス作成
+                    auto correctSeq = Sequence::create(correctAction,correctRemove, NULL);
+                    correct->runAction(correctSeq);
+
+
 
                     
                     
@@ -453,5 +475,18 @@ void GameScene::makeEnd(){
     scoreLabel -> setPosition(Vec2(180,220));
     scoreLabel -> setColor(Color3B(255,85,85));
     scoreBoard -> addChild(scoreLabel);
+    
+    
+    //クリアしている場合はクリア回数に追加
+    if(correctCount == 10){
+
+        auto userDef = UserDefault::getInstance();
+        auto clearCount = userDef->getIntegerForKey(StringUtils::format("clearCount%d",userDef->getIntegerForKey("stageSelect")).c_str());
+        
+        clearCount++;
+ 
+        userDef->setIntegerForKey(StringUtils::format("clearCount%d",userDef->getIntegerForKey("stageSelect")).c_str(),clearCount);
+ 
+    }
     
 }

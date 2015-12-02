@@ -69,8 +69,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
         
         //二回以降は読み込まないようにフラグ操作
         UserDefault::getInstance()->setBoolForKey("firstFlag", true);
+        UserDefault::getInstance()->setIntegerForKey("clearCount1", 0);
+        UserDefault::getInstance()->setIntegerForKey("clearCount2", 0);
+        UserDefault::getInstance()->setIntegerForKey("clearCount3", 0);
         
     }
+    
+    //デフォルト値の設定
+    UserDefault::getInstance()->setIntegerForKey("stageSelect", 1);
     
     auto scene = TopScene::createScene();
 
