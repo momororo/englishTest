@@ -79,6 +79,7 @@
 		A408ED131C0EFB2900DB238E /* back_top.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ED121C0EFB2900DB238E /* back_top.png */; };
 		A408ED221C10685800DB238E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A408ED211C10685800DB238E /* Images.xcassets */; };
 		A408ED241C10731700DB238E /* bk_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ED231C10731700DB238E /* bk_3.png */; };
+		A408ED2A1C1087C600DB238E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A408ED2C1C1087C600DB238E /* InfoPlist.strings */; };
 		A44FC0751BC3971A00AEE934 /* GameScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0711BC3971A00AEE934 /* GameScene */; };
 		A44FC0761BC3971A00AEE934 /* GameScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0721BC3971A00AEE934 /* GameScene.csb */; };
 		A44FC0771BC3971A00AEE934 /* titleScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0731BC3971A00AEE934 /* titleScene */; };
@@ -222,6 +223,7 @@
 		A408ED121C0EFB2900DB238E /* back_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_top.png; sourceTree = "<group>"; };
 		A408ED211C10685800DB238E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "EnglishTestVer2-mobile/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		A408ED231C10731700DB238E /* bk_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk_3.png; sourceTree = "<group>"; };
+		A408ED2B1C1087C600DB238E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A44FC0711BC3971A00AEE934 /* GameScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameScene; sourceTree = "<group>"; };
 		A44FC0721BC3971A00AEE934 /* GameScene.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameScene.csb; sourceTree = "<group>"; };
 		A44FC0731BC3971A00AEE934 /* titleScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = titleScene; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				A46F07491BFDE925004E0D2D /* TopScene.cpp */,
 				A46F074A1BFDE925004E0D2D /* TopScene.h */,
 				A408ED0E1C0ED96000DB238E /* Memo.rtf */,
+				A408ED2C1C1087C600DB238E /* InfoPlist.strings */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -598,6 +601,7 @@
 				A408ECF51C0DB98B00DB238E /* bk_1.png in Resources */,
 				A469C5F31C09E1B1000B9C26 /* PlistOfQuestion.plist in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				A408ED2A1C1087C600DB238E /* InfoPlist.strings in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				A408ED221C10685800DB238E /* Images.xcassets in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
@@ -703,6 +707,17 @@
 			targetProxy = 1AC6FB24180E99E1004C840B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A408ED2C1C1087C600DB238E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A408ED2B1C1087C600DB238E /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
