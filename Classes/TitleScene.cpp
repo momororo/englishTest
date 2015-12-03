@@ -88,7 +88,7 @@ bool TitleScene::init()
     //メニューアイテムの作成
     auto backBtnItem = MenuItemSprite::create(backBt, backBtTaped, [](Ref *ref){
         
-        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, TopScene::createScene(), 0));
+        Director::getInstance()->replaceScene(TransitionFade::create(1.0f, TopScene::createScene(), Color3B::BLACK));
         
     });
     
@@ -192,7 +192,7 @@ void TitleScene::makeStageButton(){
                 UserDefault::getInstance()->setIntegerForKey("selectStage", idx);
                 
                 //ゲーム画面に遷移
-                Director::getInstance()->replaceScene(TransitionPageTurn::create(1, GameScene::createScene(), 0));
+                Director::getInstance()->replaceScene(TransitionTurnOffTiles::create(1, GameScene::createScene()));
 
             }
             

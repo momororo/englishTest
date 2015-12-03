@@ -437,7 +437,7 @@ void GameScene::makeEnd(){
     //メニューアイテムの作成
     auto retryBtnItem = MenuItemSprite::create(retryBt, retryBtTaped, [](Ref *ref){
 
-        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, GameScene::createScene(), 0));
+        Director::getInstance()->replaceScene(TransitionTurnOffTiles::create(1, GameScene::createScene()));
         
     });
     
@@ -460,7 +460,7 @@ void GameScene::makeEnd(){
     //メニューアイテムの作成
     auto exitBtnItem = MenuItemSprite::create(exitBt, exitBtTaped, [](Ref *ref){
         
-        Director::getInstance()->replaceScene(TransitionPageTurn::create(1, TitleScene::createScene(), 0));
+        Director::getInstance()->replaceScene(TransitionTurnOffTiles::create(1, TitleScene::createScene()));
         
     });
     
