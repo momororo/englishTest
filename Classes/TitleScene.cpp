@@ -47,16 +47,6 @@ bool TitleScene::init()
     //ボタン効果音
     CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button70.mp3");
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
-    
-    //背景の生成
-    Sprite *bkWhite = Sprite::create();//下地
-    bkWhite->setTextureRect(Rect(0,0,640,1136));
-    bkWhite->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
-    bkWhite->setColor(Color3B::WHITE);//ノート
-    this->addChild(bkWhite);
-    Sprite *bk = Sprite::create(defaultBk);
-    bk->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
-    bkWhite->addChild(bk);
         
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
@@ -112,12 +102,43 @@ bool TitleScene::init()
     
 //************* もどるボタン作成 (終) ********************//
     
+    auto bk = this ->getChildByName("mainScene")->getChildByName("background");
 
+    std::string allowName;
+    std::string backName;
+    
+    switch (userDef->getIntegerForKey("selectStage")) {
+        case 1:
+            allowName = "gostage2";
+            break;
+        case 2:
+            allowName = "gostage3";
+            backName = "backstage1";
+            bk -> setPosition(Vec2(bk->getPosition().x - selfFrame.width/2,bk->getPosition().y));
+            piyo ->setPosition(mainScene->getChildByName("background")->getChildByName("Button_1")->getPosition());
+            break;
+        case 3:
+            allowName = "backstage2";
+            bk -> setPosition(Vec2(bk->getPosition().x - selfFrame.width/2,bk->getPosition().y));
+            break;
+            
+        default:
+            break;
+    }
 
     //矢印の設定(初期設定)
-    auto allow = dynamic_cast<ui::Button*>(mainScene->getChildByName("background")->getChildByName("gostage2"));
+    auto allow = dynamic_cast<ui::Button*>(mainScene->getChildByName("background")->getChildByName(allowName));
     allow -> setVisible(true);
     allow -> setTouchEnabled(true);
+
+    if (userDef->getIntegerForKey("selectStage") == 2) {
+        
+        auto backAllow = dynamic_cast<ui::Button*>(mainScene->getChildByName("background")->getChildByName(backName));
+        backAllow -> setVisible(true);
+        backAllow -> setTouchEnabled(true);
+        
+    }
+    
     
     //矢印の動作設定
     makeMoveButton();

@@ -42,6 +42,26 @@
       <FilePathData Path="question/twelve.png" />
       <FilePathData Path="question/twenty.png" />
       <FilePathData Path="question/two.png" />
+      <FilePathData Path="question/bread.png" />
+      <FilePathData Path="question/cake.png" />
+      <FilePathData Path="question/candy.png" />
+      <FilePathData Path="question/cheese.png" />
+      <FilePathData Path="question/chicken.png" />
+      <FilePathData Path="question/chocolate.png" />
+      <FilePathData Path="question/cookie.png" />
+      <FilePathData Path="question/doughnut.png" />
+      <FilePathData Path="question/egg.png" />
+      <FilePathData Path="question/ice cream.png" />
+      <FilePathData Path="question/juice.png" />
+      <FilePathData Path="question/ketchup.png" />
+      <FilePathData Path="question/milk.png" />
+      <FilePathData Path="question/salt.png" />
+      <FilePathData Path="question/sandwich.png" />
+      <FilePathData Path="question/sausage.png" />
+      <FilePathData Path="question/soup.png" />
+      <FilePathData Path="question/sugar.png" />
+      <FilePathData Path="question/tea.png" />
+      <FilePathData Path="question/water.png" />
     </ImageFiles>
     <MaxSize Width="4096" Height="4096" />
   </Content>

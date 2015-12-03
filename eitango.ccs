@@ -137,6 +137,26 @@
           <Image Name="twelve.png" />
           <Image Name="twenty.png" />
           <Image Name="two.png" />
+          <Image Name="bread.png" />
+          <Image Name="cake.png" />
+          <Image Name="candy.png" />
+          <Image Name="cheese.png" />
+          <Image Name="chicken.png" />
+          <Image Name="chocolate.png" />
+          <Image Name="cookie.png" />
+          <Image Name="doughnut.png" />
+          <Image Name="egg.png" />
+          <Image Name="ice cream.png" />
+          <Image Name="juice.png" />
+          <Image Name="ketchup.png" />
+          <Image Name="milk.png" />
+          <Image Name="salt.png" />
+          <Image Name="sandwich.png" />
+          <Image Name="sausage.png" />
+          <Image Name="soup.png" />
+          <Image Name="sugar.png" />
+          <Image Name="tea.png" />
+          <Image Name="water.png" />
         </Folder>
       </RootFolder>
     </Group>
