@@ -137,15 +137,17 @@ void TopScene::makeTutorial(){
         
     }
     
+    //閉じるボタンを押した時の動作
     closeBt -> addTouchEventListener([&](Ref* pSender,ui::Widget::TouchEventType type){
         
         if (type == cocos2d::ui::Widget::TouchEventType::ENDED) {
             
-            //説明画像とボタンの不可視化・操作不可能
+            //説明画像とボタンのスプライト作成（上記のスプライトを引用したら落ちました）
             auto turorialFalse = dynamic_cast<Sprite*>(this->getChildByName("mainScene") -> getChildByName("tutorial"));
             
             auto closeBtFalse = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName(StringUtils::format("Button_4")));
             
+            //説明画像とボタンの不可視化・操作不可能
             turorialFalse -> setVisible(false);
             closeBtFalse->setVisible(false);
             closeBtFalse->setTouchEnabled(false);

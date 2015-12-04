@@ -1,6 +1,6 @@
 <PlistInfoProjectFile>
   <PropertyGroup Name="PlistOfQuestion" Type="Plist" ID="9f1a3da0-8bae-489c-a832-bf6a97dc9d29" Version="2.3.3.0" />
-  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
       <FilePathData Path="question/bear.png" />
       <FilePathData Path="question/cat.png" />
@@ -23,7 +23,6 @@
       <FilePathData Path="question/wolf.png" />
       <FilePathData Path="question/zebra.png" />
       <FilePathData Path="question/eight.png" />
-      <FilePathData Path="question/eighteen.png" />
       <FilePathData Path="question/eleven.png" />
       <FilePathData Path="question/fifteen.png" />
       <FilePathData Path="question/five.png" />
@@ -62,6 +61,7 @@
       <FilePathData Path="question/sugar.png" />
       <FilePathData Path="question/tea.png" />
       <FilePathData Path="question/water.png" />
+      <FilePathData Path="question/eighteen.png" />
     </ImageFiles>
     <MaxSize Width="4096" Height="4096" />
   </Content>
