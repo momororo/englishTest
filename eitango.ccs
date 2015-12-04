@@ -13,6 +13,8 @@
           <Image Name="logBt_tapped.png" />
           <Image Name="startBt_tapped.png" />
           <Image Name="tutorialBt_tapped.png" />
+          <Image Name="tutorial.png" />
+          <Image Name="closeBt.png" />
         </Folder>
         <Folder Name="GameScene">
           <Folder Name="stage1">

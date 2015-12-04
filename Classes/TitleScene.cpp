@@ -120,6 +120,8 @@ bool TitleScene::init()
         case 3:
             allowName = "backstage2";
             bk -> setPosition(Vec2(bk->getPosition().x - selfFrame.width/2,bk->getPosition().y));
+            piyo ->setPosition(mainScene->getChildByName("background")->getChildByName("Button_2")->getPosition());
+
             break;
             
         default:

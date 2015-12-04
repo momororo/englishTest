@@ -62,6 +62,32 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
+          <AbstractNodeData Name="tutorial" ActionTag="83039915" VisibleForFrame="False" Tag="64" IconVisible="False" LeftMargin="75.0000" RightMargin="711.0000" TopMargin="63.2694" BottomMargin="70.7306" ctype="SpriteObjectData">
+            <Size X="918.0000" Y="506.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="534.0000" Y="323.7306" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3134" Y="0.5058" />
+            <PreSize X="0.5387" Y="0.7906" />
+            <FileData Type="Normal" Path="titleScene/tutorial.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Button_4" ActionTag="-859959390" VisibleForFrame="False" Tag="66" IconVisible="False" LeftMargin="887.0000" RightMargin="739.0000" TopMargin="85.4260" BottomMargin="476.5740" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="48" Scale9Height="56" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="78.0000" Y="78.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="926.0000" Y="515.5740" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5434" Y="0.8056" />
+            <PreSize X="0.0458" Y="0.1219" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Normal" Path="titleScene/closeBt.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
         </Children>
       </ObjectData>
     </Content>

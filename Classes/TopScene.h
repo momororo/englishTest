@@ -27,6 +27,8 @@ public:
         
     // implement the "static create()" method manually
     CREATE_FUNC(TopScene);
+    
+    void makeTutorial();
   
 };
 

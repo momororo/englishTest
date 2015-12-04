@@ -97,6 +97,7 @@ void TopScene::makeStageButton(){
                         break;
                     case 2:
                         //遊び方の実装
+                        makeTutorial();
                     
                         break;
                     case 3:
@@ -111,6 +112,58 @@ void TopScene::makeStageButton(){
             
         });
     }
+    
+    
+}
+
+void TopScene::makeTutorial(){
+    
+    //説明文の画像の可視化
+    auto tutorial = dynamic_cast<Sprite*>(this->getChildByName("mainScene") -> getChildByName("tutorial"));
+    tutorial -> setVisible(true);
+    
+    //説明文の閉じるボタンの可視化・操作可能
+    auto closeBt = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName(StringUtils::format("Button_4")));
+
+    closeBt -> setVisible(true);
+    closeBt -> setTouchEnabled(true);
+    
+    //他のボタンを押せないように設定
+    for (int idx = 1; idx <= 3; idx++) {
+        
+        auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName(StringUtils::format("Button_%d",idx)));
+        
+        button -> setTouchEnabled(false);
+        
+    }
+    
+    closeBt -> addTouchEventListener([&](Ref* pSender,ui::Widget::TouchEventType type){
+        
+        if (type == cocos2d::ui::Widget::TouchEventType::ENDED) {
+            
+            //説明画像とボタンの不可視化・操作不可能
+            auto turorialFalse = dynamic_cast<Sprite*>(this->getChildByName("mainScene") -> getChildByName("tutorial"));
+            
+            auto closeBtFalse = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName(StringUtils::format("Button_4")));
+            
+            turorialFalse -> setVisible(false);
+            closeBtFalse->setVisible(false);
+            closeBtFalse->setTouchEnabled(false);
+            
+            //その他ボタンの動作を可能に
+            for (int idx = 1; idx <= 3; idx++) {
+                
+                auto button = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName(StringUtils::format("Button_%d",idx)));
+                
+                button -> setTouchEnabled(true);
+                
+            }
+            
+        }
+        
+    
+    });
+
     
     
 }
