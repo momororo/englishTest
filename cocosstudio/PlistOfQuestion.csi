@@ -1,5 +1,5 @@
 <PlistInfoProjectFile>
-  <PropertyGroup Name="PlistOfQuestion" Type="Plist" ID="9f1a3da0-8bae-489c-a832-bf6a97dc9d29" Version="2.3.3.0" />
+  <PropertyGroup Name="PlistOfQuestion" Type="Plist" ID="9f1a3da0-8bae-489c-a832-bf6a97dc9d29" Version="3.10.0.0" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
       <FilePathData Path="question/bear.png" />

@@ -80,6 +80,7 @@
 		A408ED221C10685800DB238E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A408ED211C10685800DB238E /* Images.xcassets */; };
 		A408ED241C10731700DB238E /* bk_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ED231C10731700DB238E /* bk_3.png */; };
 		A408ED2A1C1087C600DB238E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A408ED2C1C1087C600DB238E /* InfoPlist.strings */; };
+		A41B42271CED99A90017CC3D /* button70.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41B42261CED99A90017CC3D /* button70.mp3 */; };
 		A44FC0751BC3971A00AEE934 /* GameScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0711BC3971A00AEE934 /* GameScene */; };
 		A44FC0761BC3971A00AEE934 /* GameScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0721BC3971A00AEE934 /* GameScene.csb */; };
 		A44FC0771BC3971A00AEE934 /* titleScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0731BC3971A00AEE934 /* titleScene */; };
@@ -224,6 +225,7 @@
 		A408ED211C10685800DB238E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "EnglishTestVer2-mobile/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		A408ED231C10731700DB238E /* bk_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk_3.png; sourceTree = "<group>"; };
 		A408ED2B1C1087C600DB238E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A41B42261CED99A90017CC3D /* button70.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button70.mp3; sourceTree = "<group>"; };
 		A44FC0711BC3971A00AEE934 /* GameScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameScene; sourceTree = "<group>"; };
 		A44FC0721BC3971A00AEE934 /* GameScene.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameScene.csb; sourceTree = "<group>"; };
 		A44FC0731BC3971A00AEE934 /* titleScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = titleScene; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A41B42261CED99A90017CC3D /* button70.mp3 */,
 				A408ED211C10685800DB238E /* Images.xcassets */,
 				A408ED121C0EFB2900DB238E /* back_top.png */,
 				A408ED101C0EDB4600DB238E /* scoreBoard.png */,
@@ -605,6 +608,7 @@
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				A408ED221C10685800DB238E /* Images.xcassets in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				A41B42271CED99A90017CC3D /* button70.mp3 in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				A408ED071C0DE23600DB238E /* funwari-round.otf in Resources */,
@@ -756,6 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sacrew.EnglishhTest;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
@@ -796,6 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sacrew.EnglishhTest;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";

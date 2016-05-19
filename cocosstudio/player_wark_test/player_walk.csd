@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="player_walk" Type="Node" ID="21b9bcc5-fc73-4b2f-89d8-adc14fc68a96" Version="2.3.3.0" />
+  <PropertyGroup Name="player_walk" Type="Node" ID="21b9bcc5-fc73-4b2f-89d8-adc14fc68a96" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="60" Speed="1.0000">

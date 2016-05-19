@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="BanzaiSkeletal" Type="Skeleton" ID="cd7db470-9665-4aba-bca4-53dc73f0adcd" Version="2.3.3.0" />
+  <PropertyGroup Name="BanzaiSkeletal" Type="Skeleton" ID="cd7db470-9665-4aba-bca4-53dc73f0adcd" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="60" Speed="1.0000">

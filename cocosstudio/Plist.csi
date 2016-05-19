@@ -1,5 +1,5 @@
 <PlistInfoProjectFile>
-  <PropertyGroup Name="Plist" Type="Plist" ID="43e087ef-d359-48ac-9363-23e31e792534" Version="2.3.3.0" />
+  <PropertyGroup Name="Plist" Type="Plist" ID="43e087ef-d359-48ac-9363-23e31e792534" Version="3.10.0.0" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
       <FilePathData Path="player_wark_test/player.png" />

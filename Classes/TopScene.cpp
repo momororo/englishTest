@@ -48,6 +48,7 @@ bool TopScene::init()
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
     
     //背景の生成
+    
     Sprite *bkWhite = Sprite::create();//下地
     bkWhite->setTextureRect(Rect(0,0,640,1136));
     bkWhite->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
@@ -56,6 +57,7 @@ bool TopScene::init()
     Sprite *bk = Sprite::create(defaultBk);
     bk->setPosition(Vec2(selfFrame.width/2,selfFrame.height/2));
     bkWhite->addChild(bk);
+    
     
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("TitleScene.csb");

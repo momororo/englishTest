@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="RightWalkSkeletal" Type="Skeleton" ID="be1595fb-1811-4b61-8ae7-e2cd45004a6e" Version="2.3.3.0" />
+  <PropertyGroup Name="RightWalkSkeletal" Type="Skeleton" ID="be1595fb-1811-4b61-8ae7-e2cd45004a6e" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="60" Speed="1.0000">
