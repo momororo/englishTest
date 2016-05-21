@@ -43,6 +43,8 @@ bool GameScene::init()
     
     //ボタン効果音
     CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button70.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button26.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button62.mp3");
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
     
     
@@ -108,9 +110,14 @@ bool GameScene::init()
     startImage->setName("start");
     this->addChild(startImage);
     
+    //BGM再生
+    if (!CocosDenshion::SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying()) {
+        
+    CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("gameScene.mp3",true);
+    CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.2f);
+        
+    }
     
-    
-
     return true;
 }
 
@@ -168,6 +175,9 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                 log("正解");
                 correctCount++;
                 
+                //正解時の効果音
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button26.mp3");
+                
                 auto correct = Sprite::create("correct.png");
                 auto pos = choices->at(idx)->getPosition();
                 correct->setPosition(pos);
@@ -209,6 +219,9 @@ void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
                 
                 //不正解の処理
                 log("不正解");
+                
+                //不正解時の効果音
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button62.mp3");
                 
                 //ループで正解以外の選択肢を黒色に染める
                 for(int idxidx = 0; idxidx < choices->size(); idxidx++){
@@ -436,6 +449,9 @@ void GameScene::makeEnd(){
     
     //メニューアイテムの作成
     auto retryBtnItem = MenuItemSprite::create(retryBt, retryBtTaped, [](Ref *ref){
+        
+        //効果音
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
 
         Director::getInstance()->replaceScene(TransitionTurnOffTiles::create(1, GameScene::createScene()));
         
@@ -459,6 +475,10 @@ void GameScene::makeEnd(){
     
     //メニューアイテムの作成
     auto exitBtnItem = MenuItemSprite::create(exitBt, exitBtTaped, [](Ref *ref){
+        
+        //効果音
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
+        CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
         
         Director::getInstance()->replaceScene(TransitionTurnOffTiles::create(1, TitleScene::createScene()));
         

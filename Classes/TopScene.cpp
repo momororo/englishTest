@@ -46,6 +46,13 @@ bool TopScene::init()
     //ボタン効果音
     CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button70.mp3");
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
+        
+    //BGM再生
+    if (!CocosDenshion::SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying()== true) {
+        CocosDenshion::SimpleAudioEngine::getInstance()->preloadBackgroundMusic("stageSelect.mp3");
+        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("stageSelect.mp3",true);
+        CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.2f);
+    }
     
     //背景の生成
     
@@ -92,6 +99,9 @@ void TopScene::makeStageButton(){
             
             //タップ終わり時、ゲーム画面へ遷移
             if(type == cocos2d::ui::Widget::TouchEventType::ENDED){
+                
+                //効果音
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
                 
                 switch (idx) {
                     case 1:
@@ -144,6 +154,8 @@ void TopScene::makeTutorial(){
         
         if (type == cocos2d::ui::Widget::TouchEventType::ENDED) {
             
+            //効果音
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
             //説明画像とボタンのスプライト作成（上記のスプライトを引用したら落ちました）
             auto turorialFalse = dynamic_cast<Sprite*>(this->getChildByName("mainScene") -> getChildByName("tutorial"));
             

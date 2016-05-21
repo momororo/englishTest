@@ -47,6 +47,12 @@ bool TitleScene::init()
     //ボタン効果音
     CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("button70.mp3");
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
+    
+    //BGM再生
+    if (!CocosDenshion::SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying()) {
+        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("stageSelect.mp3",true);
+        CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.2f);
+    }
         
     //cocostudioのタイトルシーン読み込み
     auto mainScene = CSLoader::getInstance()->createNode("GameScene.csb");
@@ -89,6 +95,9 @@ bool TitleScene::init()
     auto backBtnItem = MenuItemSprite::create(backBt, backBtTaped, [](Ref *ref){
         
         Director::getInstance()->replaceScene(TransitionFade::create(1.0f, TopScene::createScene(), Color3B::BLACK));
+        
+        //効果音
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
         
     });
     
@@ -190,6 +199,12 @@ void TitleScene::makeStageButton(){
             //タップ終わり時、ゲーム画面へ遷移
             if(type == cocos2d::ui::Widget::TouchEventType::ENDED){
                 
+                //効果音
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
+                
+                //BGMを停止
+                CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+                
                 //ユーザーデフォルトにステージ数を記録
                 UserDefault::getInstance()->setIntegerForKey("selectStage", idx);
                 
@@ -215,6 +230,9 @@ void TitleScene::makeMoveButton(){
         
         //タップ終わり時、動作開始
         if(type == cocos2d::ui::Widget::TouchEventType::ENDED){
+            
+            //効果音
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
 
             auto goSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage2"));
             
@@ -294,6 +312,9 @@ void TitleScene::makeMoveButton(){
         //タップ終わり時、動作開始
         if(type == cocos2d::ui::Widget::TouchEventType::ENDED){
             
+            //効果音
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
+            
             auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
             
             //矢印を非表示&タップ不可に
@@ -363,6 +384,9 @@ void TitleScene::makeMoveButton(){
         
         //タップ終わり時、動作開始
         if(type == cocos2d::ui::Widget::TouchEventType::ENDED){
+            
+            //効果音
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
             
             auto goSt3 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("gostage3"));
             
@@ -435,6 +459,9 @@ void TitleScene::makeMoveButton(){
         
         //タップ終わり時、動作開始
         if(type == cocos2d::ui::Widget::TouchEventType::ENDED){
+            
+            //効果音
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
             
             auto backSt2 = dynamic_cast<ui::Button*>(this->getChildByName("mainScene")->getChildByName("background")->getChildByName("backstage2"));
             

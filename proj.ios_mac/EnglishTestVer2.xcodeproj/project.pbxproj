@@ -81,6 +81,8 @@
 		A408ED241C10731700DB238E /* bk_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A408ED231C10731700DB238E /* bk_3.png */; };
 		A408ED2A1C1087C600DB238E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A408ED2C1C1087C600DB238E /* InfoPlist.strings */; };
 		A41B42271CED99A90017CC3D /* button70.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41B42261CED99A90017CC3D /* button70.mp3 */; };
+		A41B422C1CEDAEC90017CC3D /* button26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41B422A1CEDAEC90017CC3D /* button26.mp3 */; };
+		A41B422D1CEDAEC90017CC3D /* button62.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41B422B1CEDAEC90017CC3D /* button62.mp3 */; };
 		A44FC0751BC3971A00AEE934 /* GameScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0711BC3971A00AEE934 /* GameScene */; };
 		A44FC0761BC3971A00AEE934 /* GameScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0721BC3971A00AEE934 /* GameScene.csb */; };
 		A44FC0771BC3971A00AEE934 /* titleScene in Resources */ = {isa = PBXBuildFile; fileRef = A44FC0731BC3971A00AEE934 /* titleScene */; };
@@ -226,6 +228,8 @@
 		A408ED231C10731700DB238E /* bk_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk_3.png; sourceTree = "<group>"; };
 		A408ED2B1C1087C600DB238E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A41B42261CED99A90017CC3D /* button70.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button70.mp3; sourceTree = "<group>"; };
+		A41B422A1CEDAEC90017CC3D /* button26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button26.mp3; sourceTree = "<group>"; };
+		A41B422B1CEDAEC90017CC3D /* button62.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button62.mp3; sourceTree = "<group>"; };
 		A44FC0711BC3971A00AEE934 /* GameScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameScene; sourceTree = "<group>"; };
 		A44FC0721BC3971A00AEE934 /* GameScene.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameScene.csb; sourceTree = "<group>"; };
 		A44FC0731BC3971A00AEE934 /* titleScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = titleScene; sourceTree = "<group>"; };
@@ -374,6 +378,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A41B422A1CEDAEC90017CC3D /* button26.mp3 */,
+				A41B422B1CEDAEC90017CC3D /* button62.mp3 */,
 				A41B42261CED99A90017CC3D /* button70.mp3 */,
 				A408ED211C10685800DB238E /* Images.xcassets */,
 				A408ED121C0EFB2900DB238E /* back_top.png */,
@@ -607,6 +613,7 @@
 				A408ED2A1C1087C600DB238E /* InfoPlist.strings in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				A408ED221C10685800DB238E /* Images.xcassets in Resources */,
+				A41B422C1CEDAEC90017CC3D /* button26.mp3 in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				A41B42271CED99A90017CC3D /* button70.mp3 in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
@@ -616,6 +623,7 @@
 				A408ECF71C0DB9C900DB238E /* bk_2.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				A44FC0A61BCE341700AEE934 /* BanzaiSkeletal.csb in Resources */,
+				A41B422D1CEDAEC90017CC3D /* button62.mp3 in Resources */,
 				A44FC0A91BCF8CFE00AEE934 /* gameScene.mp3 in Resources */,
 				A44FC0A71BCE341700AEE934 /* LeftWalkSkeletal.csb in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
